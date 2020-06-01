@@ -22,161 +22,163 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png" />
 
-<link rel="stylesheet" href="css/main.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/main.css"/>
 
 <script src="https://fb.me/react-0.13.3.min.js"></script>
 <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-<script type="text/jsx" src="js/footer.js"></script>
+<script type="text/jsx" src="static/js/footer.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47447635-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47447635-2');
+</script>
 </head>
 <body>
+  <div class="half-header">
+    <nav id='navbar'></nav>
 
-    <div class="half-header">
-        <nav id='navbar'></nav>
+    <header id='titulo-other'>
+      <img src="apple-touch-icon.png" alt="Minilink Soluciones" class='slideDown'> <h1>Profesionales y Empresas</h1>
+    </header>
+    <span class='adorno-small'></span>
+  </div>
 
-        <header id='titulo-other'>
-            <img src="apple-touch-icon.png" alt="Minilink Soluciones" class='slideDown'> <h1>Profesionales y Empresas</h1>
-        </header>
-    </div>
-
-    <div id="rubro">
-        <strong>Haz tu búsqueda</strong>
-        
-        <script>
-          (function() {
-            var cx = '004575919497788482541:bfekp2cnzbo';
-            var gcse = document.createElement('script');
-            gcse.type = 'text/javascript';
-            gcse.async = true;
-            gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(gcse, s);
-          })();
-        </script>
-        <gcse:search></gcse:search>
-    </div>
-
-    <section id='lista-clientes'>      
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.minilink.edgarcornejo.com/wilfredo-verapinto' title'Wilfredo Verapinto'>Wilfredo Verapinto</a></h2>
-                        <h3>Diseñador Publicitario</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Arequipa, Arequipa' target='_blank'>Arequipa, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 992 065 580</b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/wilfredo-verapinto' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.fotos.edgarcornejo.com/' title'Fotos Gratis'>Fotos Gratis</a></h2>
-                        <h3>Banco de Fotos</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Arequipa, Arequipa' target='_blank'>Arequipa, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 974 795 622</b>
-                    <b class='caja-contac'>Web:<br><a href='http://www.fotos.edgarcornejo.com/' title='www.fotos.edgarcornejo.com' target='_blank'>fotos.edgarcornejo.com</a></b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/fotos-gratis' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.edgarcornejo.com' title='Edgar Cornejo'>Edgar Cornejo</a></h2>
-                        <h3>Diseñador Publicitario</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/PGgz64rfsqz' title='Mariano Melgar, Arequipa' target='_blank'>Mariano Melgar, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 974 795 622</b>
-                    <b class='caja-contac'>Web:<br><a href='http://www.edgarcornejo.com' title='www.edgarcornejo.com' target='_blank'>www.edgarcornejo.com</a></b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/edgar-cornejo' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.minilink.edgarcornejo.com/arturo-ticona' title='Arturo Ticona'>Arturo Ticona</a></h2>
-                        <h3>Ilustrador Gráfico</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Arequipa, Arequipa' target='_blank'>Arequipa, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 988 887 727</b>
-                    <b class='caja-contac'>Web:<br><a href='https://startur.wordpress.com/' title='startur.wordpress.com' target='_blank'>startur.wordpress.com</a></b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/arturo-ticona' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.minilink.edgarcornejo.com/jose-cornejo' title='Jose A. Cornejo'>Jose A. Cornejo</a></h2>
-                        <h3>Topógrafo</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Arequipa, Arequipa' target='_blank'>Arequipa, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 952 054 488</b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/jose-cornejo' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.minilink.edgarcornejo.com/abogada' title'Abogada'>Abogada</a></h2>
-                        <h3>Abogada</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/xhE61KLwwZv' title='Lima' target='_blank'>Lima</a></b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/abogada' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-        <div class='cliente'>
-            <article>
-                <header>
-                    <hgroup>
-                        <h2><a href='http://www.minilink.edgarcornejo.com/amelie-pasteleria-creativa' title='Amelie Pasteleria Creativa'>Amelie Pasteleria Creativa</a></h2>
-                        <h3>Pasteleria</h3>
-                    </hgroup>
-                </header>
-                <div class='contenedor-contac'>
-                    <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Arequipa, Arequipa' target='_blank'>Arequipa, Arequipa</a></b>
-                    <b class='caja-contac'>Teléfono:<br>(054) 989 090 101</b>
-                    <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/amelie-pasteleria-creativa' title='Más información'>Más información</a></b>
-                </div>
-            </article>
-        </div>
-
-    </section>
+  <div id="busqueda">
+    <strong>Haz tu búsqueda</strong>
     
-    <div id="menumasfooter"></div>
+    <script>
+      (function() {
+        var cx = '004575919497788482541:bfekp2cnzbo';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
 
-<!--[if lt IE 9]>
-    <p class="chromeframe">Usted está utilizando un navegador desactualizado. <a href="http://browsehappy.com/" target='_blank'>Actualiza tu navegador actual</a> o <a href="http://www.google.com/chromeframe/?redirect=true" target='_blank'>instalar Google Chrome Frame</a> para ver mejor este sitio.<br>- Recomiendo Instalar <a href='https://www.google.com/intl/es/chrome/browser/' title='Google Chrome' target='_blank'>Google Chrome</a></p>
-<![endif]-->
+  <section id='lista-clientes'>
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.minilink.edgarcornejo.com/wilfredo-verapinto' title'Wilfredo Verapinto'>Wilfredo Verapinto</a></h2>
+          <h3>Diseñador Publicitario</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br>
+          <a href='https://goo.gl/maps/LaEti65yTSE2' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a>
+        </b>
+        <b class='caja-contac'>Teléfono:<br>
+          <a href="tel:+51992065580" title="llamar al +51992065580">+51 992 065 580</a> 
+        </b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/wilfredo-verapinto' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.fotos.edgarcornejo.com/' title='Fotos Gratis'>Fotos Gratis</a></h2>
+          <h3>Banco de Fotos</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a></b>
+        <b class='caja-contac'>Web:<br><a href='http://www.fotos.edgarcornejo.com/' title='www.fotos.edgarcornejo.com' target='_blank'>fotos.edgarcornejo.com</a></b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/fotos-gratis' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.edgarcornejo.com' title='Edgar Cornejo'>Edgar Cornejo</a></h2>
+          <h3>Diseñador Publicitario</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/PGgz64rfsqz' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a></b>
+        <b class='caja-contac'>Teléfono:<br>
+          <a href="tel:+51974795622" title="+51974795622">+51 974 795 622</a>
+        </b>
+        <b class='caja-contac'>Web:<br><a href='http://www.edgarcornejo.com' title='www.edgarcornejo.com' target='_blank'>www.edgarcornejo.com</a></b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/edgar-cornejo' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.minilink.edgarcornejo.com/arturo-ticona' title='Arturo Ticona'>Arturo Ticona</a></h2>
+          <h3>Ilustrador Gráfico</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a></b>
+        <b class='caja-contac'>Teléfono:<br>
+          <a href="tel:+51988887727" title="+51988887727">+51 988 887 727</a>
+        </b>
+        <b class='caja-contac'>Web:<br><a href='https://startur.wordpress.com/' title='startur.wordpress.com' target='_blank'>startur.wordpress.com</a></b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/arturo-ticona' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.minilink.edgarcornejo.com/jose-cornejo' title='Jose A. Cornejo'>Jose A. Cornejo</a></h2>
+          <h3>Topógrafo</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a></b>
+        <b class='caja-contac'>Teléfono:<br>
+          <a href="tel:+51952054488" title="+51952054488">+51 952 054 488</a>
+        </b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/jose-cornejo' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.minilink.edgarcornejo.com/abogada' title='Abogada'>Abogada</a></h2>
+          <h3>Abogada</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/xhE61KLwwZv' title='Perú, Lima' target='_blank'>Perú, Lima</a></b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/abogada' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+
+    <div class='cliente'>
+      <header>
+        <hgroup>
+          <h2><a href='http://www.minilink.edgarcornejo.com/amelie-pasteleria-creativa' title='Amelie Pasteleria Creativa'>Amelie Pasteleria Creativa</a></h2>
+          <h3>Pasteleria</h3>
+        </hgroup>
+      </header>
+      <div class='contenedor-contac'>
+        <b class='caja-contac'>Ubicación:<br><a href='https://goo.gl/maps/LaEti65yTSE2' title='Perú, Arequipa' target='_blank'>Perú, Arequipa</a></b>
+        <b class='caja-contac'>Teléfono:<br>
+          <a href="tel:+51989090101" title="+51989090101">+51 989 090 101</a>
+        </b>
+        <b class='caja-contac'><a href='http://www.minilink.edgarcornejo.com/amelie-pasteleria-creativa' title='Más información'>Más información</a></b>
+      </div>
+    </div>
+  </section>
+    
+  <div id="menumasfooter"></div>
 </body>
 </html>

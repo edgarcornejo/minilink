@@ -22,39 +22,48 @@
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon.png" />
 
-<link rel="stylesheet" href="css/main.css" media="all">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="static/css/main.css" media="all">
 
 <script src="https://fb.me/react-0.13.3.min.js"></script>
 <script src="https://fb.me/JSXTransformer-0.13.3.js"></script>
-<script type="text/jsx" src="js/footer.js"></script>
+<script type="text/jsx" src="static/js/footer.js"></script>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-47447635-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-47447635-2');
+</script>
 </head>
 
 <body>
+  <div class="half-header">
+    <nav id='navbar'></nav>
 
-    <div class="half-header">
-        <nav id='navbar'></nav>
+    <header id='titulo-other'>
+      <img src="apple-touch-icon.png" alt="Minilink Soluciones" class='slideDown'> <h1>Afiliate facilmente</h1>
+    </header>
+    <span class='adorno-small'></span>
+  </div>
 
-        <header id='titulo-other'>
-            <img src="apple-touch-icon.png" alt="Minilink Soluciones" class='slideDown'> <h1>Afiliate facilmente</h1>
-        </header>
-    </div>
+  <section class='section-contain'>
+    <article>
+      <header>
+        <hgroup>
+          <h2>Es asi de facil</h2>
+        </hgroup>
+      </header>
+      <p>Para poder registrarte solo debes enviarnos un mensaje solicitando registrarte en <strong>Minilink</strong> al correo 
+      <strong><a href='mailto:inilink@edgarcornejo.com' title='inilink@edgarcornejo.com'>minilink@edgarcornejo.com</a></strong> me comunicare con usted para solucionar sus dudas. <br><br>
+      <span>Co-fundador: Edgar Cornejo C.</span>
+      </p>
+    </article>
+  </section>
 
-    <section class='parrafos-contenido'>
-        <article>
-            <header><hgroup><h2>Es tan facil</h2></hgroup></header>
-            <p>Para poder registrarte solo debes enviarnos un mensaje solicitando registrarte en <strong>Minilink</strong> al correo 
-            <strong><a href='mailto:inilink@edgarcornejo.com' title='inilink@edgarcornejo.com'>minilink@edgarcornejo.com</a></strong> me comunicare con usted para solucionar sus dudas. <br><br>
-            <span>Co-fundador: Edgar Cornejo C.</span>
-            </p>
-        </article>
-    </section>
-
-    <div id="menumasfooter"></div>
-
-<!--[if lt IE 9]>
-    <p class="chromeframe">Usted está utilizando un navegador desactualizado. <a href="http://browsehappy.com/" target='_blank'>Actualiza tu navegador actual</a> o <a href="http://www.google.com/chromeframe/?redirect=true" target='_blank'>instalar Google Chrome Frame</a> para ver mejor este sitio.<br>- Recomiendo Instalar <a href='https://www.google.com/intl/es/chrome/browser/' title='Google Chrome' target='_blank'>Google Chrome</a></p>
-<![endif]-->
-
+  <div id="menumasfooter"></div>
 </body>
 </html>

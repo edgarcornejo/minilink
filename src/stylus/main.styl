@@ -1,3 +1,10 @@
+:root
+  font-size 16px
+  --miniYellow hsl(60, 100%, 50%)
+  --miniOrange hsl(60, 100%, 48%)
+  --miniSolidorange hsl(50, 100%, 45%)
+
+/*Reset*/
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
   margin 0
   padding 0
@@ -15,26 +22,16 @@ a
   color #000
   text-decoration none
 
+/*Styles*/
 body
   width 100%
-  font-size 16px
-  font-family Calibri,sans-serif,Helvetica,Arial
+  font-family 'Quicksand',sans-serif,Helvetica,Arial
   color #000
   font-variant-ligatures no-common-ligatures
   -webkit-font-variant-ligatures no-common-ligatures
 
 html
   width 100%
-
-.chromeframe
-  color #fff
-  background #000
-  width 100%
-  text-align center
-  height 100%
-  position fixed
-  padding-top 100px
-  z-index 10000
 
 a:active,a:hover
   outline 0
@@ -51,6 +48,7 @@ a:active,a:hover
 @viewport
   width device-width
 
+/*Animation Basic*/
 .anin-rapido
   transition all .2s ease-out
 
@@ -60,28 +58,236 @@ a:active,a:hover
 .anin-lento
   transition all 1s ease-out
 
+/*Index*/
+#navbar
+  width 100%
+  margin 0 auto
+  background var(--miniOrange)
+  position fixed
+  z-index 20
+  ul
+    width 100%
+    max-width 1200px
+    height auto
+    display flex
+    flex-wrap wrap
+    justify-content space-around
+    margin 0 auto
+  li
+    height 3rem
+    width 33.3333%
+    line-height 3rem
+    text-align center
+    font-size 1.2rem
+    font-weight lighter
+    text-transform uppercase
+    letter-spacing 2px
+    &:hover
+      border-bottom 3px solid var(--miniSolidorange)
+
 .large-header
   width 100%
-  background #ff0
-
-.half-header
-  background #ff0
-  width 100%
-  height auto
+  background var(--miniYellow)
 
 #titulo
   text-align center
-  width 100%
+  width 90%
   margin 0 auto
-  padding 200px 0 200px 0
+  padding-top 12rem
   h1
-    font-size 37px
-    font-weight 300
-    padding-top 25px
+    font-size 3rem
+    font-weight bold
+    padding-top 2rem
+    line-height 2.5rem
+  span
+    font-size 2rem
+    font-weight normal
   h2
-    font-size 21px
-    padding-top 10px
+    font-size 1.5rem
+    padding-top 2rem
     font-style italic
+    font-weight normal
+
+.adorno
+  width 100%
+  &:before
+    content ''
+    border-left 49vw solid transparent
+    border-right 49vw solid transparent
+    border-bottom 100px solid #FFF
+    font-size 0
+    line-height 198px
+
+.adorno-small
+  width 100%
+  &:before
+    content ''
+    border-left 49vw solid transparent
+    border-right 49vw solid transparent
+    border-bottom 25px solid #FFF
+    font-size 0
+    line-height 48px
+
+/*Description*/
+.section-contain
+  width 100%
+  article
+    margin 0 auto
+    padding-top 6rem
+    width 90%
+  h2
+    font-size 2.5rem
+    padding 0 0 3rem 0
+    text-transform uppercase
+    font-weight lighter
+    letter-spacing 2px
+    text-align center
+  h3
+    margin 0 auto
+    text-transform uppercase
+    font-weight lighter
+    letter-spacing 2px
+    font-size 1.5rem
+    width 90%
+    max-width 700px
+    padding 80px 0 20px 0
+  p
+    margin 0 auto
+    line-height 1.8rem
+    max-width 800px
+    width 80%
+    font-size 1.5rem
+
+/*Paquetes*/
+#packs-content
+  padding 6rem 0 6rem 0
+  width 90%
+  max-width 1024px
+  margin 0 auto
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+  .pack
+    padding 2.5rem 0 1rem 0
+    width 30%
+    border-radius 8px
+    box-shadow 0 0 15px rgba(0,0,0,0.1)
+  .content-pack
+    margin 0 auto
+    max-width 80%
+  h3
+    text-align center
+    font-size 1.5rem
+    text-transform uppercase
+    letter-spacing 2px
+    border-bottom 1px solid var(--miniSolidorange)
+    padding-bottom 0.5rem
+  h4
+    text-align center
+    font-size 1.2rem
+    text-transform uppercase
+    letter-spacing 2px
+  p
+    padding 1rem 0 1rem 0
+  ul
+    padding 1rem 0 1rem 0
+  li
+    list-style-type circle
+    list-style-position inside
+
+.triangle
+  display block
+  position relative
+  top -5px
+  margin 0 auto
+  background white
+  width .5rem
+  height .5rem
+  border-radius 50%
+  border 1px solid var(--miniSolidorange)
+
+.boton-pack
+  position relative
+  bottom 0
+  font-size 1.5rem
+  cursor pointer
+  border-radius 5px
+  text-align center
+  line-height 3rem
+  display block
+  margin 1rem 0 1rem 0
+  height 3rem
+  background var(--miniOrange)
+  &:hover
+    box-shadow 0 0 15px rgba(0,0,0,0.1)
+
+/*Video Incrustado*/
+.container-video
+  max-height 600px
+  max-width 1024px
+  margin 0 auto
+
+#main-video
+  position relative
+  overflow hidden
+  width auto
+  max-width 1024px
+  margin 0 auto
+  padding-top 56.25%
+  max-height 600px
+  iframe
+    position absolute
+    top 0
+    left 0
+    bottom 0
+    right 0
+    width 100%
+    height 100%
+    max-height 600px
+
+/*aside*/
+#content-menu
+  margin-top 6rem
+  background var(--miniOrange)
+  padding 2rem 0 2rem 0
+
+#menu-footer
+  width 100%
+  max-width 1200px
+  margin 0 auto
+  display flex
+  flex-wrap wrap
+  justify-content space-around
+
+.list
+  font-size .8rem
+  width 30%
+  line-height 1.6rem
+  text-align center
+  border-right 1px solid var(--miniSolidorange)
+  &:last-child
+    border none
+  a
+    &:hover
+      border-bottom 1px solid var(--miniSolidorange)
+  h4
+    text-transform uppercase
+    letter-spacing 2px
+    margin-bottom 1rem
+
+#main-footer
+  max-width 1200px
+  width 90%
+  padding 2rem 0 2rem 0
+  margin 0 auto
+  p
+    text-align right
+
+/*Profesionales y Empresas*/
+.half-header
+  background var(--miniYellow)
+  width 100%
+  height auto
 
 #titulo-other
   width 90%
@@ -104,240 +310,91 @@ a:active,a:hover
 
 .slideDown
   animation-name slideDown
-  -webkit-animation-name slideDown
   animation-duration 1s
-  -webkit-animation-duration 1s
   animation-timing-function ease
-  -webkit-animation-timing-function ease
   visibility visible !important
 
-#navbar
-  width 100%
-  margin 0 auto
-  background #f3f300
-  position fixed
-  z-index 20
-  ul
-    width 100%
-    max-width 1200px
-    height auto
-    display -webkit-flex
-    display -ms-flexbox
-    display flex
-    -webkit-flex-wrap wrap
-    -ms-flex-wrap wrap
-    flex-wrap wrap
-    -webkit-justify-content space-around
-    -ms-flex-pack distribute
-    justify-content space-around
-    margin 0 auto
-  li
-    height 48px
-    width 33.3333%
-    line-height 48px
-    text-align center
-    font-size 18px
-    font-weight lighter
-    text-transform uppercase
-    letter-spacing 2px
-    &:hover
-      border-bottom 1px solid #e6c100
-
 /*Busquedas*/
-#rubro
+#busqueda
   margin 0 auto
-  max-width 90%
-  padding 30px 0 30px 0
-  strong
-    font-size 1.5em
-    text-transform uppercase
-
-.parrafos-contenido
-  width 100%
-  article
-    margin 0 auto
-    padding 5em 0 5em 0
-  h2
-    font-size 2.5em
-    padding 0 0 1em 0
-    text-transform uppercase
-    font-weight lighter
-    letter-spacing 2px
-    text-align center
-  h3
-    margin 0 auto
-    text-transform uppercase
-    font-weight lighter
-    letter-spacing 2px
-    font-size 25px
-    width 90%
-    max-width 700px
-    padding 80px 0 20px 0
-  p
-    margin 0 auto
-    line-height 1.5em
-    max-width 800px
-    width 80%
-    font-size 21px
-
-.yellow
-  background #EFEFEF
-
-#packs-content
-  padding 3em 0 3em 0
   width 90%
   max-width 1024px
-  margin 0 auto
-  display -webkit-flex
-  display -ms-flexbox
-  display flex
-  -webkit-flex-wrap wrap
-  -ms-flex-wrap wrap
-  flex-wrap wrap
-  -webkit-justify-content space-around
-  -ms-flex-pack distribute
-  justify-content space-around
-  div
-    padding 2em 0 1em 0
-    width 30%
-    background #fff
-    border-radius 1px
-  h3
-    background #f3f300
-    text-align center
-    padding 10px 0 10px 0
-    font-size 2em
+  padding 30px 0 30px 0
+  strong
     text-transform uppercase
-    font-weight lighter
-    letter-spacing 2px
-  h4
-    text-align center
-    font-size 21px
-    text-transform uppercase
-    font-weight lighter
-    letter-spacing 2px
-  p
-    width 80%
-    margin 0 auto
-    display block
-    font-weight lighter
-    padding 15px 0 15px 0
-  ul
-    width 80%
-    margin 0 auto
-    padding 15px 0 15px 0
-  li
-    font-weight lighter
-    list-style disc
-    list-style-position inside
 
-.triangle
-  display block
-  width 100%
-  margin 0 auto
-  text-align center
-  &:after
-    content ''
-    margin 0 auto
-    width 0
-    height 0
-    border-left 25px solid transparent
-    border-right 25px solid transparent
-    border-top 25px solid #f3f300
-    font-size 0
-
-.boton-pack
-  font-size 1.5em
-  cursor pointer
-  border-radius 1px
-  text-align center
-  line-height 2em
-  display block
-  margin 1em auto
-  width 120px
-  height 2em
-  background #ffd600
-  &:hover
-    border solid 1px #F3F300
-
-#main-video
-  padding 5em 0 5em 0
-  iframe
-    display block
-    margin 0 auto
-
-#content-menu
-  background #CCC
-  padding 5em 0 5em 0
-
-#menu-footer
-  width 100%
-  max-width 1200px
-  margin 0 auto
-  display flex
-  flex-wrap wrap
-  justify-content space-around
-
-.list
-  font-size 14px
-  width 24%
-  line-height 1.8em
-  text-align center
-  padding 2em 1em 2em 1em
-  border-right 1px solid #000
-  &:last-child
-    border none
-  a
-    &:hover
-      border-bottom 1px solid #000
-  h4
-    font-size 21px
-    text-transform uppercase
-    font-weight lighter
-    letter-spacing 2px
-    margin-bottom 1em
-
-#main-footer
-  background #fff
-  color #3b3b3b
-  max-width 1200px
+/*Primera lista de directorio*/
+#lista-clientes
   width 90%
-  padding 2em 0 2em 0
+  max-width 1200px
+  height auto
   margin 0 auto
-  img
-    float left
-    position relative
-    top -15px
-  p
-    text-align right
-    font-size 16px
-    color #484848
-  a
-    color #484848
+  padding-bottom 2rem
+  h2
+    color var(--miniSolidorange)
+    text-decoration underline
+  h2, h3
+    font-size 1.2rem
+    display inline-block
+  h3
+    font-weight lighter
+    
+.cliente
+  width 90%
+  margin 0 auto
+  padding 1.3rem 0 1rem 1rem
+  border-top solid 1px var(--miniSolidorange)
+  &:nth-child(5)
+    border-left 5px solid var(--miniSolidorange)
+    &:before
+      content 'Verificado'
+      position relative
+      top -10px
+      left -1.2rem
+      padding 5px
+      border-radius 3px
+      margin 0 auto
+      background var(--miniSolidorange)
+      font-weight bolder
 
+.contenedor-contac
+  display flex
+  flex-wrap wrap
+  justify-content space-between
+  padding-top 0.5rem
+
+.caja-contac
+  font-weight lighter
+  a
+    padding 10px
+    display inline-block
+    background var(--miniYellow)
+    border-radius 5px
+    margin 5px
+
+/*Perfiles de contacto*/
 .big-image-profile
   width 100%
   height auto
-  background-color #e7d400
+  background-color var(--miniYellow)
 
 .bio
   margin 0 auto
   width 90%
   max-width 1200px
-  padding-top 5em
+  padding-top 5rem
+  background #FFF
   hgroup
-    background-color #FFF
-    padding 2em 0 0.5em 2em
+    padding 2rem 0 0.5rem 2rem
     background-position 80% 0
     background-repeat no-repeat
-  aside
-    background-color #FFF
-    padding 0 0 1em 2em
-    line-height 1.5em
+  .contacto
+    padding 0 0 1rem 2rem
+    line-height 1.5rem
   h1
-    font-size 1.3em
+    font-size 1.5rem
   h2
-    font-size 3em
+    font-size 3rem
 
 .logo-edgar
   background-image url("../img/profile/edgarcornejo.png")
@@ -361,140 +418,55 @@ a:active,a:hover
   background-image url("../img/profile/amelie-pasteleria-creativa.png")
 
 #main-profile
-  padding 2em 0 2em 0
-  background #ebebeb
+  padding 2rem 0 2rem 0
 
 #perfil-contenido
   margin 0 auto
   max-width 1200px
   width 90%
-  color #3b3b3b
   display flex
   flex-wrap wrap
   justify-content space-around
   div
-    width 100%
-    padding 2em 0 1em 0
-    background-color #fff
-    border-radius 3px
-    margin-bottom 2em
-  h2
+    width 48%
+    padding 2rem 0 1rem 0
+    border-radius 5px
+    margin-bottom 2rem
+    box-shadow 0 0 15px rgba(0,0,0,0.1)
+  h3
     font-size 1.5em
-    background #d7d7d7
-    padding .4em
+    border-bottom 1px solid var(--miniSolidorange)
+    text-align center
+    padding-bottom 1rem
   p
-    padding 2em 3em 1em 3em
+    padding 2rem 3rem 1rem 3rem
   ul
-    padding 2em 1em 2em 2em
+    width 90%
+    margin 2rem auto 
     display flex
     flex-wrap wrap
   li
-    padding .5em
-    background #d7d7d7
-    margin-right 1em
-    margin-bottom 1em
+    padding .8rem
+    border-radius 5px
+    font-size 1.2rem
+    background var(--miniYellow)
+    margin-right 1rem
+    margin-bottom 1rem
     display inline-block
-  a
-    font-weight 400
-    color #000
-    display inline-block
-
-.triangle-b
-  display block
-  width 100%
-  margin 0 auto
-  text-align center
-  &:after
-    content ''
-    margin 0 auto
-    width 0
-    height 0
-    border-left 25px solid transparent
-    border-right 25px solid transparent
-    border-top 25px solid #d7d7d7
-    font-size 0
-
-#lista-clientes
-  width 100%
-  height auto
-  margin 0 auto
-  background #EFEFEF
-  article
-    width 90%
-    max-width 780px
-    margin 0 auto
-    a
-      color #537AB4
-      &:hover
-        text-decoration underline
-  h2, h3
-    font-size 1.2em
-    padding 3px 0 3px 0
-    display inline-block
-  h3
-    font-weight lighter
-    
-
-.cliente
-  width 100%
-  margin 0 auto
-  padding 1.3em 0 1.3em 0
-  border-top solid 1px #CCCCCC
-  background no-repeat 10% center
-  background-size 80px 115px
-  &:nth-child(1)
-    background-image url("../img/profile/wilfredo.png")
-  &:nth-child(2)
-    background-image url("../img/profile/fg.png")
-  &:nth-child(3)
-    background-image url("../img/profile/edgarcornejo.png")
-  &:nth-child(4)
-    background-image url("../img/profile/arturoticona.png")
-  &:nth-child(5)
-    background-image url("../img/profile/josecornejo.png")
-    background-color #FFF
-  &:nth-child(6)
-    background-image url("../img/profile/abogada.png")
-  &:nth-child(7)
-    background-image url("../img/profile/amelie-pasteleria-creativa.png")
-  &:nth-child(5)
-    &:before
-      content 'Premiun'
-      position relative
-      top -10px
-      background url("../tile.png") 0 0 no-repeat #FFF
-      background-size contain
-      border solid 2px #FFDC00
-      margin 0 auto
-      display block
-      text-align center
-      max-width 90px
-      padding 5px 0px 5px 20px
-      border-radius 5px
-      font-weight bolder
-
-.contenedor-contac
-  display flex
-  flex-wrap wrap
-  justify-content space-between
-  padding-top 5px
-  font-size 14px
-
-.caja-contac
-  font-weight lighter
 
 /*Responsive Web Design*/
-/*@media screen and (max-width:1366px)*/
-
-
 @media screen and (max-width:1024px)
-  .bio
-    background none
-    
-  .cliente
-    background-image none !important
+  #navbar li
+    font-size 1rem
 
 @media screen and (max-width:860px)
+  #navbar li
+    font-size 0.8rem
+    letter-spacing 0
+  
+  #titulo-other h1
+    font-size 2rem 
+
   #perfil-contenido a
     text-align center
 
@@ -504,19 +476,15 @@ a:active,a:hover
 
   .bio
     text-align center
-    background none
 
   #perfil-contenido h2
-    font-size 1.5em
+    font-size 1.5rem
   
   .logo-edgar, .logo-wilfredo, .logo-arturo, .logo-abogada, .logo-fotos, .logo-jose
     background none
 
 
 @media screen and (max-width:720px)
-  #navbar li
-    font-size:12px
-  
   #titulo-other
     padding 4em 0 4em 0
     img
@@ -562,11 +530,8 @@ a:active,a:hover
     margin 0 auto
     text-align center
   
-  #packs-content
-    display block
-    div
-      width 90%
-      margin 1em auto
+  #packs-content h3,h4
+    font-size 1.2rem !important
 
 @media screen and (max-width:620px)
   #titulo
@@ -577,7 +542,7 @@ a:active,a:hover
     ul
       display block
     li
-      font-size 16px
+      font-size 1rem
     li
       height 50px
       width 100%
@@ -618,17 +583,23 @@ a:active,a:hover
       left 0
       width 100%
       height 100%
+  
+  #packs-content 
+    display block
+    .pack
+      width 90%
+      margin 1em auto
 
-@media screen and (max-width:480px)
+@media screen and (max-width:420px)
   #titulo
     position static
     width 100%
     margin 0 auto
-      h1
+    h1
       font-size 21px
-      h2
+    h2
       font-size 16px
-  
+
   #demo-canvas
     display none
   
