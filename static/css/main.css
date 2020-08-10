@@ -123,9 +123,6 @@ a:hover {
 @-moz-viewport {
   width: device-width;
 }
-@-ms-viewport {
-  width: device-width;
-}
 @viewport {
   width: device-width;
 }
@@ -535,6 +532,9 @@ a:hover {
 }
 .amelie {
   background-image: url("../img/profile/amelie-pasteleria-creativa.png");
+}
+.fumigaaqp {
+  background-image: url("../img/profile/fumigaaqp.png");
 }
 #main-profile {
   padding: 2rem 0 2rem 0;
