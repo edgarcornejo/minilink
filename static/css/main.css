@@ -453,20 +453,18 @@ a:hover {
   margin: 0 auto;
   padding: 1.3rem 0 1rem 1rem;
   border-top: solid 1px var(--miniSolidorange);
-}
-.cliente:nth-child(7) {
-  border-left: 5px solid var(--miniSolidorange);
-}
-.cliente:nth-child(7):before {
-  content: 'Verificado';
-  position: relative;
-  top: -10px;
-  left: -1.2rem;
-  padding: 5px;
-  border-radius: 3px;
-  margin: 0 auto;
-  background: var(--miniSolidorange);
-  font-weight: bolder;
+/*&:nth-child(7)
+    border-left 5px solid var(--miniSolidorange)
+    &:before
+      content 'Verificado'
+      position relative
+      top -10px
+      left -1.2rem
+      padding 5px
+      border-radius 3px
+      margin 0 auto
+      background var(--miniSolidorange)
+      font-weight bolder*/
 }
 .contenedor-contac {
   display: flex;
@@ -535,6 +533,12 @@ a:hover {
 }
 .fumigaaqp {
   background-image: url("../img/profile/fumigaaqp.png");
+}
+.masdeperu {
+  background-image: url("../img/profile/masdeperu.png");
+}
+.aht {
+  background-image: url("../img/profile/aht.png");
 }
 #main-profile {
   padding: 2rem 0 2rem 0;
