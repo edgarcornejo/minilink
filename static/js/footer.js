@@ -4,7 +4,7 @@ var Menu = React.createClass({
     return (
       <ul>
         <li>
-          <a className='anin-normal' href='http://www.minilink.edgarcornejo.com' title='Minilink'>Minilink</a>
+          <a className='anin-normal' href='https://www.minilink.edgarcornejo.com' title='Minilink'>Minilink</a>
         </li>
         <li>
           <a className='anin-normal' href='profesionales-empresas' title='Profesionales y Empresas'>Profesionales y Empresas</a>
@@ -43,16 +43,16 @@ var Mfooter = React.createClass({
 
             <ul className='list'>
               <h4>Recomendado</h4>
-              <li><a href='http://www.edgarcornejo.com' target='_blank' title='Edgar Cornejo'>Edgar Cornejo</a></li>
-              <li><a href='http://renovadesign.blogspot.com' target='_blank' title='Renova Design'>Renova Design</a></li>
-              <li><a href='http://www.fotos.edgarcornejo.com' target='_blank' title='Fotos Gratis'>Fotos Gratis</a></li>
-              <li><a href='http://www.edgarcornejo.com/publicaciones/' target='_blank' title='Blog Edgar'>Blog Edgar</a></li>
+              <li><a href='https://www.edgarcornejo.com' target='_blank' title='Edgar Cornejo'>Edgar Cornejo</a></li>
+              <li><a href='https://renovadesign.blogspot.com' target='_blank' title='Renova Design'>Renova Design</a></li>
+              <li><a href='https://www.fotos.edgarcornejo.com' target='_blank' title='Fotos Gratis'>Fotos Gratis</a></li>
+              <li><a href='https://www.edgarcornejo.com/publicaciones/' target='_blank' title='Blog Edgar'>Blog Edgar</a></li>
             </ul>
           </div>
         </div>
 
         <footer id='main-footer'>
-          <p>Copyright © <a href='http://www.edgarcornejo.com' title='Edgar Cornejo'>Edgar Cornejo</a> All Rights Reserved.</p>
+          <p>Copyright © <a href='https://www.edgarcornejo.com' title='Edgar Cornejo'>Edgar Cornejo</a> All Rights Reserved.</p>
         </footer>
       </aside>
     )
