@@ -1,0 +1,39 @@
+---
+const { title, description, keywords, image, imgAlt, type, url } = Astro.props;
+---
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon.png" />
+  <meta name="generator" content={Astro.generator} />
+
+  <title>{title}</title>
+
+  <!-- META -->
+  <meta name="autor" content="Edgar Cornejo" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={keywords} />
+  <meta name="robots" content="index" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={url} />
+  <meta property="og:image" content={image} />
+  <meta property="og:image:alt" content={imgAlt} />
+  <meta property="og:type" content={type} />
+  <meta property="og:site_name" content="Minilink Soluciones" />
+  <meta property="og:locale" content="es_PE" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  /><link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+  />
+</head>

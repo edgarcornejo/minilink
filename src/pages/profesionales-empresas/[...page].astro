@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PerfilCard from "../../components/PerfilCard.astro";
+import Pagination from "../../components/Pagination.astro";
+
+import { formatBlogPosts } from "../../js/utils";
+
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob("./*.md");
+  const formattedPosts = formatBlogPosts(allPosts);
+
+  return paginate(formattedPosts, {
+    pageSize: 3,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<Layout
+  title="Profesionales y Empresas - Minilink Soluciones profesionales en internet poner mi negocio en internet"
+  description="Ofrecemos los servicios de publicidad para tu empresa asi como servicios de diseño grafico, desarrolllo web y marketing online"
+  h1="Profesionales y Empresas"
+>
+  <div class="card-container">
+    {
+      page.data.map((post) => (
+        <PerfilCard frontmatter={post.frontmatter} url={post.url} />
+      ))
+    }
+  </div>
+</Layout>

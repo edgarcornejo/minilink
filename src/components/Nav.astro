@@ -1,0 +1,42 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<nav class="main-navigation">
+  <input id="menu" type="checkbox" class="input-menu" />
+
+  <div class="wrapper-menu">
+    <div class="logotipo">
+      <a href="/" title="Minilink Soluciones"
+        ><img src="../minilink.svg" alt="Minilink Soluciones" />
+      </a>
+    </div>
+
+    <label for="menu" class="open-menu"
+      ><Icon name="mdi:hamburger-menu" /></label
+    >
+    <label for="menu" class="closed-menu"><Icon name="mdi:close" /></label>
+    <menu>
+      <li>
+        <Icon name="mdi:user-card-details" />
+        <a
+          href="/profesionales-empresas/"
+          title="Profesionales y Empresas"
+          class="nav-li">Profesionales y Empresas</a
+        >
+      </li>
+      <li>
+        <Icon name="mdi:user-box" />
+        <a href="/nosotros" title="Nosotros" class="nav-li">Nosotros</a>
+      </li>
+      <li>
+        <Icon name="mdi:user-box-multiple" />
+        <a href="/afiliarte" title="Afiliarte" class="nav-li">Afiliarte</a>
+      </li>
+    </menu>
+  </div>
+</nav>
+
+<script>
+  import "../js/nav.js";
+</script>

@@ -1,0 +1,41 @@
+---
+import "../styles/reset.css";
+import "../styles/global.css";
+import MainHead from "./MainHead.astro";
+import Nav from "../components/Nav.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  /* Para componente MainHead */
+  title = "Minilink Soluciones - Pública tu profesión o empresa en Internet, directorio empresarial.",
+  description = "Pública tu profesión o empresa en Internet con Minilink Soluciones, fácil y gratuitamente.",
+  keywords = "directorio empresarial, profesionales, Minilink Soluciones, diseñadores, topógrafo, publica tu profesión",
+  image = "/minilink.svg",
+  imgAlt = "M mayuscula con la palabra minilink debajo de ella.",
+  type = "Website",
+  url = "minilink.edgarcornejo.com",
+  category,
+  offers,
+  frontmatter,
+  /* Para componente Header */
+  h1 = "Pública tu profesión o empresa en Internet",
+  h2 = "Minilink Soluciones",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <MainHead {title} {description} {keywords} {image} {imgAlt} {type} {url} />
+  <body>
+    <Nav />
+
+    <Header {image} {h1} {h2} {category} {offers} />
+
+    <main>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>

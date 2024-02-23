@@ -1,0 +1,18 @@
+---
+import { slugify } from "../js/utils";
+
+const { frontmatter, url } = Astro.props;
+
+const { title, image, description, category, name } = frontmatter;
+---
+
+<article class="card-profile">
+  <a href={url} title={title}>
+    <span class="card-category">{category}</span>
+    <div class="card-descripcion">
+      <img src={image.url} alt={image.alt} />
+      <h3>{name}</h3>
+      <p>{description}</p>
+    </div>
+  </a>
+</article>
