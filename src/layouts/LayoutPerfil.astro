@@ -3,8 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/perfil.css";
 
 const { frontmatter, url = window.location } = Astro.props;
-const { title, description, date, category, author, image, offers, name } =
-  frontmatter;
+const { title, description, category, offers, name } = frontmatter;
 ---
 
 <Layout
