@@ -249,32 +249,32 @@ main {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  gap: 2vw;
 }
 #packs-content .pack {
-  padding: 1.2vw;
-  width: 30%;
+  padding: 2vw;
+  line-height: 120%;
+  width: 48%;
   border-radius: 0.2vw;
-  background: #0d4eff;
-  color: #fefefe;
+  border: solid 0.1vw #777a56;
 }
 #packs-content h3,
 #packs-content h4 {
   text-align: center;
   font-size: 1.4vw;
-  line-height: 140%;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1pt;
-  border-bottom: 0.1vw solid #fefefe;
-  margin-bottom: 1vh;
+  letter-spacing: 2pt;
+  margin-bottom: 2vh;
+  line-height: 140%;
 }
 #packs-content h4 {
   font-size: 1.2vw;
+  font-weight: 400;
 }
 #packs-content p {
   font-size: 1vw;
   line-height: 140%;
-  font-weight: 400;
   -ms-hyphens: none;
       hyphens: none;
   padding: 0.6vw 0 0.6vw 0;
@@ -343,6 +343,29 @@ main {
   font-weight: 400;
   color: #443252;
   padding: 0.4vw;
+}
+#busqueda {
+  width: 90%;
+  max-width: 1920px;
+  padding: 2rem 0 2rem 0;
+  margin: 0 auto;
+  font-size: 1vw;
+}
+#busqueda h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1vw;
+  padding-bottom: 1vw;
+  color: #0d4eff;
+}
+#busqueda input {
+  height: 2vw !important;
+  background: #fff !important;
+  font-size: 1vw !important;
+}
+#busqueda button {
+  height: 2vw !important;
+  background: #0d4eff;
 }
 footer {
   padding: 4vh 0 4vh 0;
@@ -427,6 +450,48 @@ footer a {
   footer small {
     font-size: 1em;
   }
+  .wrapper-articles h2,
+  .wrapper-articles h3 {
+    font-size: 1.8em;
+    padding: 0;
+  }
+  .wrapper-articles p {
+    font-size: 1em;
+  }
+  .wrapper-articles ul {
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
+  }
+  .wrapper-articles li {
+    font-size: 1em;
+  }
+  #packs-content h3,
+  #packs-content h4 {
+    font-size: 1.4em;
+  }
+  #packs-content p {
+    font-size: 1em;
+  }
+  #packs-content li {
+    font-size: 1em;
+  }
+  .boton-pack {
+    font-size: 1em;
+  }
+  #busqueda {
+    font-size: 1em;
+  }
+  #busqueda h2 {
+    font-size: 1em;
+    padding-bottom: 1rem;
+  }
+  #busqueda input {
+    height: 1.6rem !important;
+    font-size: 1em !important;
+  }
+  #busqueda button {
+    height: 1.6rem !important;
+  }
 }
 @media screen and (max-width: 768px) {
   .wrapper-menu svg {
@@ -487,5 +552,27 @@ footer a {
   .wrapper-content-aside .wrapper-ul {
     width: 100%;
     text-align: center;
+  }
+  #packs-content .pack {
+    padding: 2rem;
+    width: 100%;
+  }
+  .wrapper-articles article {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  .wrapper-articles article:nth-child(even) div {
+    background: none;
+  }
+  .wrapper-articles header {
+    padding: 1rem;
+  }
+  .wrapper-articles h2,
+  .wrapper-articles h3 {
+    text-align: center;
+    width: 100%;
   }
 }

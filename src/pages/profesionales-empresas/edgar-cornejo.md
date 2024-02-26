@@ -3,7 +3,7 @@ layout: ../../layouts/LayoutPerfil.astro
 title: Desarrollador Frontend
 name: Edgar Cornejo
 description: "Soy diseñador gráfico y desarrollador web de profesión, eterno alumno online, humano digital, moderno y feliz."
-image: { url: "../../profile/edgarcornejo.png", alt: "Edgar Cornejo" }
+image: { url: "../../profile/edgar-cornejo.svg", alt: "Edgar Cornejo" }
 date: 2024-02-20
 draft: false
 category: Profesional

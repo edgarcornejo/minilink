@@ -1,4 +1,5 @@
 /* Colores */
+/* Estilos de archivos .md */
 .perfil {
   width: 90%;
   max-width: 1920px;
@@ -72,6 +73,9 @@
   padding: 0.8vw 0.6vw;
   color: #fefefe;
 }
+.perfil li a {
+  color: #fefefe;
+}
 .contacto {
   padding: 2vw 0 2vw 0;
   display: -webkit-box;
@@ -99,62 +103,226 @@
 .contacto a {
   padding: 0.8vw;
 }
-.card-container {
-  width: 90%;
-  max-width: 1920px;
-  margin: 0 auto;
+/* Profesionales y empresas */
+/* Componente PerfilCard */
+.card-profile {
+  width: 48%;
+  font-size: 1vw;
+  line-height: 120%;
+  border: solid 0.1vw #777a56;
+  border-radius: 0.2vw;
+  padding: 2vw;
+}
+.card-profile a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.card-profile {
+.card-profile header {
+  color: #443252;
+  padding: 1vw 0 1vw 0;
+  width: 100%;
+}
+.card-profile h2,
+.card-profile h3 {
+  line-height: 100%;
+  font-size: 2vw;
+}
+.card-profile h3 {
+  font-weight: 400;
+}
+.card-profile figure {
   width: 30%;
-  font-size: 1vw;
-  line-height: 120%;
-  background: #0d4eff;
+  padding: 0.6vw;
+  border: solid 0.1vw #777a56;
+  border-radius: 0.2vw;
+}
+.card-profile figcaption {
+  padding-top: 0.4vw;
+  text-align: center;
 }
 .card-category {
   display: block;
-  background: rgba(0,0,0,0.1);
-  color: #fefefe;
-  border-radius: 0.2vw 0.2vw 0 0;
-  text-align: center;
-  padding: 1vw;
+  width: 100%;
+  margin-bottom: 0.6vw;
   letter-spacing: 3pt;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 700;
 }
 .card-descripcion {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-.card-descripcion img {
-  max-height: 20vh;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-.card-descripcion h3 {
-  background: #950ffa;
-  color: #fefefe;
-  text-align: center;
-  font-size: 1.2vw;
-  padding: 1.2vw 0 1vw 0;
+  width: 58%;
 }
 .card-descripcion p {
-  padding: 1vw;
-  background: rgba(0,0,0,0.2);
-  border-radius: 0 0 0.2vw 0.2vw;
   -ms-hyphens: none;
       hyphens: none;
   font-weight: 400;
+}
+.card-tags {
+  padding-top: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1vw;
+}
+.card-tags span {
+  -ms-hyphens: none;
+      hyphens: none;
+  text-transform: capitalize;
+  padding: 0.4vw;
+  border-radius: 0.2vw;
+  background: #e2fa00;
+}
+/* Componente Pagination */
+.pagination {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1vw;
+  margin: 1vw 0 1vw 0;
+}
+.pagination a {
+  background: #0d4eff;
+  border-radius: 0.2vw;
   color: #fefefe;
+  padding: 0.6vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1vw;
+  text-wrap: nowrap;
+  font-weight: 700;
+}
+.pagination a:hover:nth-child(odd) {
+  -webkit-transform: translatex(-0.4rem);
+          transform: translatex(-0.4rem);
+}
+.pagination a:hover:nth-child(even) {
+  -webkit-transform: translatex(0.4rem);
+          transform: translatex(0.4rem);
+}
+.pagination svg {
+  width: 2vw;
+  height: auto;
+}
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .pagination {
+    border-radius: 3px;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .pagination a {
+    font-size: 1em;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .pagination svg {
+    width: 48px;
+  }
+  .card-profile {
+    font-size: 1em;
+    border: solid 1px #777a56;
+    border-radius: 3px;
+    padding: 2rem;
+  }
+  .card-profile header {
+    padding: 1rem 0 1rem 0;
+  }
+  .card-profile h2,
+  .card-profile h3 {
+    font-size: 1.4em;
+  }
+  .card-profile figure {
+    padding: 0.6rem;
+    border: solid 1px #777a56;
+    border-radius: 3px;
+  }
+  .card-profile figcaption {
+    padding-top: 0.4rem;
+  }
+  .card-category {
+    margin-bottom: 1rem;
+  }
+  .card-tags {
+    padding-top: 1rem;
+    gap: 1rem;
+  }
+  .card-tags span {
+    padding: 1rem;
+    border-radius: 3px;
+  }
+  .perfil h1 {
+    font-size: 1.6em;
+  }
+  .perfil h2 {
+    font-size: 1.4em;
+  }
+  .perfil h3 {
+    font-size: 1.2em;
+    border-bottom: solid 1px #950ffa;
+    padding-bottom: 0.6rem;
+    margin: 1rem 0 1rem 0;
+  }
+  .perfil p {
+    font-size: 1em;
+    margin: 1rem 0 1rem 0;
+  }
+  .perfil ul {
+    margin: 1rem 0 1rem 0;
+    gap: 1rem;
+  }
+  .perfil li {
+    font-size: 1em;
+    border-left: solid 0.6rem #950ffa;
+    border-radius: 3px;
+    padding: 0.8em 0.6em;
+  }
+  .contacto {
+    padding: 1rem 0 1rem 0;
+    gap: 1rem;
+  }
+  .contacto p {
+    outline: 1px solid #777a56;
+    padding: 1rem 0 1rem 0;
+    border-radius: 3px;
+  }
+  .contacto b {
+    padding: 1rem 1rem;
+    border-radius: 3px 0 0 3px;
+  }
+  .contacto a {
+    padding: 0.8rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .card-profile {
+    width: 100%;
+  }
 }

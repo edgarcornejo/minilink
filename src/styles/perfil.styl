@@ -8,6 +8,7 @@ minigreenDeep = #443252
 miniWhite = #fefefe
 miniBlack = #1a1f29
 
+/* Estilos de archivos .md */
 .perfil
   width 90%
   max-width 1920px
@@ -57,7 +58,8 @@ miniBlack = #1a1f29
     border-radius 0.2vw
     padding 0.8vw 0.6vw
     color miniWhite
-
+    a
+      color miniWhite
 
 .contacto
   padding 2vw 0 2vw 0
@@ -77,48 +79,184 @@ miniBlack = #1a1f29
   a
     padding 0.8vw
 
-.card-container
-  width 90%
-  max-width 1920px
-  margin 0 auto
-  display flex
-  justify-content space-between
-  gap 1vw
+/* Profesionales y empresas */
 
+/* Componente PerfilCard */
 .card-profile
-  width 30%
+  width 48%
   font-size 1vw
   line-height 120%
-  background miniBlue
+  border solid 0.1vw minigreenOpaque
+  border-radius 0.2vw
+  padding 2vw
+  a
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    align-items center
+  header
+    color minigreenDeep
+    padding 1vw 0 1vw 0
+    width 100%
+  h2, h3
+    line-height 100%
+    font-size 2vw
+  h3
+    font-weight 400
+  figure
+    width 30%
+    padding 0.6vw
+    border solid 0.1vw minigreenOpaque
+    border-radius 0.2vw
+  figcaption
+    padding-top 0.4vw
+    text-align center
 
 .card-category
   display block
-  background rgba(0,0,0,0.1)
-  color miniWhite
-  border-radius 0.2vw 0.2vw 0 0
-  text-align center
-  padding 1vw
+  width 100%
+  margin-bottom 0.6vw
   letter-spacing 3pt
   text-transform uppercase
-  font-weight 400
+  font-weight 700
 
 .card-descripcion
-  display flex
-  flex-direction column
-  img
-    max-height 20vh
-    transition all 0.2s ease-in-out
-  h3
-    background miniViolet
-    color miniWhite
-    text-align center
-    font-size 1.2vw
-    padding 1.2vw 0 1vw 0
+  width 58%
   p
-    padding 1vw
-    background rgba(0,0,0,0.2)
-    border-radius 0 0 0.2vw 0.2vw
     hyphens none
     font-weight 400
+
+.card-tags
+  padding-top 1vw
+  display flex
+  flex-wrap wrap
+  gap 1vw
+  span
+    hyphens none
+    text-transform capitalize
+    padding 0.4vw
+    border-radius 0.2vw
+    background miniYellow
+
+/* Componente Pagination */  
+.pagination
+  width 100%
+  height auto
+  display flex
+  flex-wrap wrap
+  justify-content center
+  align-items center
+  gap 1vw
+  margin 1vw 0 1vw 0
+  a
+    background miniBlue
+    border-radius 0.2vw
     color miniWhite
-    
+    padding 0.6vw
+    display flex
+    font-size 1vw
+    justify-content center
+    align-items center
+    gap 1vw
+    text-wrap nowrap
+    font-weight 700
+    &:hover
+      &:nth-child(odd)
+        transform translatex(-.4rem)
+      &:nth-child(even)
+        transform translatex(.4rem)
+  svg
+    width 2vw
+    height auto
+
+/* Responsive Design */
+@media screen and (max-width:1024px)
+  /* Componente Pagination */  
+  .pagination
+    border-radius 3px
+    gap 1rem
+    margin 1rem 0 1rem 0
+    a
+      font-size 1em
+      padding 1rem
+      gap 1rem
+    svg
+      width 48px
+
+  /* Componente PerfilCard */
+  .card-profile
+    font-size 1em
+    border solid 1px minigreenOpaque
+    border-radius 3px
+    padding 2rem
+    header
+      padding 1rem 0 1rem 0
+    h2, h3
+      font-size 1.4em
+    figure
+      padding 0.6rem
+      border solid 1px minigreenOpaque
+      border-radius 3px
+    figcaption
+      padding-top 0.4rem
+  
+  .card-category
+    margin-bottom 1rem
+  
+  .card-tags
+    padding-top 1rem
+    gap 1rem
+    span
+      padding 1rem
+      border-radius 3px
+
+  /* Estilos de archivos .md */
+  .perfil
+    h1
+      font-size 1.6em
+    h2
+      font-size 1.4em
+    h3
+      font-size 1.2em
+      border-bottom solid 1px miniViolet
+      padding-bottom 0.6rem
+      margin 1rem 0 1rem 0
+    p
+      font-size 1em
+      margin 1rem 0 1rem 0
+    ul
+      margin 1rem 0 1rem 0
+      gap 1rem
+    li
+      font-size 1em
+      border-left solid 0.6rem miniViolet
+      border-radius 3px
+      padding 0.8em 0.6em
+
+  .contacto
+    padding 1rem 0 1rem 0
+    gap 1rem
+    p
+      outline 1px solid minigreenOpaque
+      padding 1rem 0 1rem 0
+      border-radius 3px
+    b
+      padding 1rem 1rem
+      border-radius 3px 0 0 3px
+    a
+      padding 0.8rem
+
+@media screen and (max-width:768px)
+  /* Componente PerfilCard */
+  .card-profile
+    width 100%
+
+
+
+
+
+
+
+
+
+

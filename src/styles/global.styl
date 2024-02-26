@@ -182,27 +182,27 @@ main
   display flex
   flex-wrap wrap
   justify-content space-around
+  gap 2vw
   .pack
-    padding 1.2vw
-    width 30%
+    padding 2vw
+    line-height 120%
+    width 48%
     border-radius 0.2vw
-    background miniBlue
-    color miniWhite
+    border solid 0.1vw minigreenOpaque
   h3,h4
     text-align center
     font-size 1.4vw
-    line-height 140%
     font-weight 700
     text-transform uppercase
-    letter-spacing 1pt
-    border-bottom 0.1vw solid miniWhite
-    margin-bottom 1vh
+    letter-spacing 2pt
+    margin-bottom 2vh
+    line-height 140%
   h4
     font-size 1.2vw
+    font-weight 400
   p
     font-size 1vw
     line-height 140%
-    font-weight 400
     hyphens none
     padding 0.6vw 0 0.6vw 0
   ul
@@ -254,6 +254,26 @@ main
     font-weight 400
     color minigreenDeep
     padding 0.4vw
+
+#busqueda
+  width 90%
+  max-width 1920px
+  padding 2rem 0 2rem 0
+  margin 0 auto
+  font-size 1vw
+  h2
+    text-transform uppercase
+    text-align center
+    font-size 1vw
+    padding-bottom 1vw
+    color miniBlue
+  input
+    height 2vw !important
+    background white !important
+    font-size 1vw !important
+  button
+    height 2vw !important
+    background miniBlue
 
 footer
   padding 4vh 0 4vh 0
@@ -323,8 +343,45 @@ footer
     padding 2rem 0 2rem 0
     small
       font-size 1em
-
   
+  /* Página Index */
+  /* Contenedor de articles */
+  .wrapper-articles
+    h2,h3
+      font-size 1.8em
+      padding 0
+    p
+      font-size 1em
+    ul
+      padding 1rem 0 1rem 0
+      gap 1rem
+    li
+      font-size 1em
+
+  /* Paquetes */
+  #packs-content
+    h3,h4
+      font-size 1.4em
+    p
+      font-size 1em
+    li
+      font-size 1em
+  
+  .boton-pack
+    font-size 1em
+
+  #busqueda
+    font-size 1em
+    h2
+      font-size 1em
+      padding-bottom 1rem
+    input
+      height 1.6rem !important
+      font-size 1em !important
+    button
+      height 1.6rem !important
+
+   
 @media screen and (max-width:768px)
   .wrapper-menu
     svg
@@ -368,3 +425,26 @@ footer
     .wrapper-ul
       width 100%
       text-align center
+
+  /* Paquetes */
+  #packs-content
+    .pack
+      padding 2rem
+      width 100%
+  
+  /* Contenedor de articles */
+  .wrapper-articles
+    article
+      flex-wrap wrap
+      padding 0
+      margin-bottom 1rem
+      gap 1rem
+      &:nth-child(even) div
+        background none
+    header
+      padding 1rem
+    h2, h3
+      text-align center
+      width 100%
+
+    

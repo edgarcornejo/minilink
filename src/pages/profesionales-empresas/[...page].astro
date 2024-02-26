@@ -5,12 +5,17 @@ import Pagination from "../../components/Pagination.astro";
 
 import { formatBlogPosts } from "../../js/utils";
 
+interface Props {
+  title: string;
+  page: any;
+}
+
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob("./*.md");
   const formattedPosts = formatBlogPosts(allPosts);
 
   return paginate(formattedPosts, {
-    pageSize: 3,
+    pageSize: 6,
   });
 }
 
@@ -20,13 +25,46 @@ const { page } = Astro.props;
 <Layout
   title="Profesionales y Empresas - Minilink Soluciones profesionales en internet poner mi negocio en internet"
   description="Ofrecemos los servicios de publicidad para tu empresa asi como servicios de diseño grafico, desarrolllo web y marketing online"
-  h1="Profesionales y Empresas"
+  h2="Profesionales y Empresas"
 >
+  <div id="busqueda">
+    <header>
+      <h2>¿Qué estas buscando?</h2>
+    </header>
+
+    <script>
+      (function () {
+        var cx = "004575919497788482541:bfekp2cnzbo";
+        var gcse = document.createElement("script");
+        gcse.type = "text/javascript";
+        gcse.async = true;
+        gcse.src = "https://cse.google.com/cse.js?cx=" + cx;
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
+
+  <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
   <div class="card-container">
     {
-      page.data.map((post) => (
+      page.data.map((post: any) => (
         <PerfilCard frontmatter={post.frontmatter} url={post.url} />
       ))
     }
   </div>
+  <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 </Layout>
+
+<style>
+  .card-container {
+    width: 90%;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1vw 0 1vw 0;
+    gap: 1vw;
+  }
+</style>
