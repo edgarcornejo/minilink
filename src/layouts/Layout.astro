@@ -1,6 +1,9 @@
 ---
+/* importando estilos */
 import "../styles/reset.css";
 import "../styles/global.css";
+
+/* importando componentes */
 import MainHead from "./MainHead.astro";
 import Nav from "../components/Nav.astro";
 import Header from "../components/Header.astro";
@@ -8,7 +11,8 @@ import Footer from "../components/Footer.astro";
 
 const {
   /* Para componente MainHead */
-  title = "Minilink Soluciones - Pública tu profesión o empresa en Internet, directorio empresarial.",
+  frontmatter,
+  title = "Minilink Soluciones",
   description = "Pública tu profesión o empresa en Internet con Minilink Soluciones, fácil y gratuitamente.",
   keywords = "directorio empresarial, profesionales, Minilink Soluciones, diseñadores, topógrafo, publica tu profesión",
   image = "/minilink.svg",
@@ -17,7 +21,6 @@ const {
   url = "minilink.edgarcornejo.com",
   category,
   offers,
-  frontmatter,
   /* Para componente Header */
   h1 = "Pública tu profesión o empresa en Internet",
   h2 = "Minilink Soluciones",

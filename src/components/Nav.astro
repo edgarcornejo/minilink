@@ -1,5 +1,7 @@
 ---
-import { Icon } from "astro-icon/components";
+/* importando Assets */
+import { Image } from "astro:assets";
+import logo from "../assets/minilink.svg";
 ---
 
 <nav class="main-navigation">
@@ -7,31 +9,37 @@ import { Icon } from "astro-icon/components";
 
   <div class="wrapper-menu">
     <div class="logotipo">
-      <a href="/" title="Minilink Soluciones"
-        ><img src="/minilink.svg" alt="Minilink Soluciones" />
+      <a href="/" title="Volver al inicio del sitio">
+        <Image src={logo} alt="Logotipo Minilink Soluciones" />
       </a>
     </div>
 
     <label for="menu" class="open-menu"
-      ><Icon name="mdi:hamburger-menu" /></label
+      ><span class="material-symbols-rounded">menu</span></label
     >
-    <label for="menu" class="closed-menu"><Icon name="mdi:close" /></label>
+    <label for="menu" class="closed-menu"
+      ><span class="material-symbols-rounded">close</span></label
+    >
     <menu>
       <li>
-        <Icon name="mdi:user-card-details" />
         <a
           href="/profesionales-empresas/"
           title="Profesionales y Empresas"
-          class="nav-li">Profesionales y Empresas</a
+          class="nav-li"
+          >Profesionales y Empresas <span class="material-symbols-rounded"
+            >business_center</span
+          ></a
         >
       </li>
       <li>
-        <Icon name="mdi:user-box" />
-        <a href="/nosotros" title="Nosotros" class="nav-li">Nosotros</a>
+        <a href="/nosotros" title="Nosotros" class="nav-li"
+          >Nosotros <span class="material-symbols-rounded">groups</span></a
+        >
       </li>
       <li>
-        <Icon name="mdi:user-box-multiple" />
-        <a href="/afiliarte" title="Afiliarte" class="nav-li">Afiliarte</a>
+        <a href="/afiliarte" title="Afiliarte" class="nav-li"
+          >Afiliarte <span class="material-symbols-rounded">person_add</span></a
+        >
       </li>
     </menu>
   </div>

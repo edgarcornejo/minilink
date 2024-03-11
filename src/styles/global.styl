@@ -5,13 +5,34 @@ miniYellow = #E2FA00
 miniBlue = #0d4eff
 minigreenOpaque = #777A56
 minigreenDeep = #443252
-miniWhite = #fefefe
+miniWhite = #F2F2F2
 miniBlack = #1a1f29
+
+/* Border y Outline */
+bordeNormal = solid clamp(2px, 0.1vw, 0.2vw) minigreenOpaque
+radiusNormal = clamp(3px, 0.2vw, 0.3vw)
+
+/* Font Size */
+fontNormal = clamp(1em, 1vw, 1.2vw)
+
+/* Padding */
+paddignNormalH = clamp(1rem, 2vh, 2.2vh)
+paddignNormalW = clamp(1rem, 2vw, 2.2vw)
+
+/* Margin */
+marginNormalH = clamp(1rem, 2vh, 2.2vh)
+
+/* Gap */
+gapNormal = clamp(1rem, 1vw, 1.1vw)
+
+html
+  font-size 16px
 
 /* Body General */
 body
   font-family "Atkinson Hyperlegible", sans-serif
-  font-size 16px
+  font-size fontNormal
+  hyphens none
   background miniWhite
   color minigreenDeep
 
@@ -28,16 +49,25 @@ a
   &:hover
     color miniBlack
 
-/* Component Header */
-/* Menu de todas las páginas */
+/* Component Nav */
 .main-navigation
-  border-bottom solid 0.1vw minigreenOpaque
+  position fixed
+  border-bottom bordeNormal
   width 100%
   background rgba(226, 250, 0, 0.8)
-  padding 2vh 0 2vh 0
+  padding paddignNormalH 0 paddignNormalH 0
   backdrop-filter blur(8px)
-  position fixed
   z-index 1
+  animation aparecer 0.8s ease-in
+
+@keyframes aparecer 
+  0%
+    opacity 0
+  100%
+    opacity 1
+
+.input-menu,.open-menu,.closed-menu
+  display none
 
 .wrapper-menu
   width 90%
@@ -49,49 +79,47 @@ a
   menu
     display flex
     align-items center
-    gap 0 1vw
-    li
-      display flex
-      gap 1vw
-      align-items center
-      outline solid 0.1vw minigreenOpaque
-      padding 0.3vw
-      border-radius 0.2vw
-      &:hover [data-icon]
-        color minigreenDeep
-    svg
-      width 1.4vw
-      height auto
-    [data-icon]
-      color minigreenOpaque
+    gap gapNormal
     a
-      font-size 1vw
+      display flex
+      align-items center
+      gap gapNormal
       font-weight 400
       letter-spacing 1pt
-      line-height 140%
-      hyphens none
-      height 100%
-      width 100%
-
-.logotipo
-  img
-    width auto
-    height 2vw
-  &:hover
-    filter invert(1)
-
-.input-menu,.open-menu,.closed-menu
-  display none
+      padding-left clamp(0.6rem, 0.4vw, 0.5vw)
+      border-radius radiusNormal
+      outline bordeNormal
+      &:hover span
+        background miniBlack
+    span
+      font-size clamp(20px, 1vw, 1.2vw)
+      color miniYellow
+      background minigreenOpaque
+      padding clamp(0.6rem, 0.4vw, 0.5vw)
+      border-radius radiusNormal
+      transition 0.2s all ease-in
 
 .li-current
   color miniBlack !important
   font-weight 700 !important
+  outline solid clamp(2px, 0.1vw, 0.2vw) miniBlack !important
+  span
+    background miniBlack !important
 
-/* Header Index */
+.logotipo
+  img
+    width auto
+    height clamp(48px, 2vw, 2.2vw)
+    transition 0.2s all ease-in
+    &:hover
+      filter invert(1)
+
+/* Componente Header */
 .wrapper-header
-  background miniYellow
+  background url(/img/struckaxiom.png), miniYellow
+  background-blend-mode multiply
   width 100%
-  padding 14vh 0 4vw 0
+  padding clamp(120px, 13vh, 15vh) 0 clamp(48px, 5vh, 6vh) 0
   header
     width 90%
     max-width 1920px
@@ -99,26 +127,26 @@ a
     display flex
     align-items center
     justify-content center
+    animation aparecer 0.8s ease-in both
+    animation-delay 0.8s
   img
-    width 8vw
-    padding-right 2vw
+    width clamp(80px, 8vw, 9vw)
+    padding-right paddignNormalW
   div
-    padding 2vh 0 2vh 2vw
-    border-left solid 0.2vw miniBlack
+    padding paddignNormalH 0 paddignNormalH paddignNormalW
+    border-left bordeNormal
   h2
-    font-size 2vw
+    font-size clamp(2em, 2vw, 2.1vw)
     font-weight 700
     line-height 100%
   h1
-    font-size 1vw
     line-height 100%
 
 /* Contenido de página */
 main
   width 100%
-  height auto
-  margin 0 auto
-  padding 4vh 0 4vh 0
+  background url(/img/struckaxiom.png)
+  padding clamp(5rem, 6vh, 6.1vh) 0 clamp(5rem, 6vh, 6.1vh) 0
 
 /* Página Index */
 /* Contenedor de articles */
@@ -130,52 +158,46 @@ main
     display flex
     align-items center
     justify-content center
-    padding 2vw
-    margin-bottom 4vh
-    gap 2vw
-    &:nth-child(even) div
-      background rgba(0,0,0,0.2)
+    padding paddignNormalW
+    margin-bottom clamp(4rem, 4vh, 4.1vh)
+    border-radius radiusNormal
+    gap clamp(2rem, 2vw, 2.1vw)
+    &:nth-child(odd) div
+      background rgba(0,0,0,0.1)
+      border-radius radiusNormal
   header
     width 100%
-    padding 1vw
+    padding paddignNormalW
     display flex
     align-items center
-    padding 5vh 0 5vh 0
-    backdrop-filter blur(8px)
   h2,h3
-    font-size 2vw
+    font-size clamp(1.8em, 3vw, 3.1vw)
     line-height 100%
     font-weight 700
     letter-spacing 1pt
     hyphens none
-    padding 1vw
+    padding paddignNormalH
   div
     width 100%
-    padding 1vw
+    padding paddignNormalH
     backdrop-filter blur(8px)
   p
-    font-size 1.2vw
-    line-height 120%
-    hyphens none
-    margin-bottom 1vw
+    margin-bottom marginNormalH
   ul
     display flex
     flex-flow column wrap
-    gap 1vw
-    padding 1vw 0 1vw 0
+    gap gapNormal
+    padding paddignNormalH 0 paddignNormalH 0
   li
-    font-size 1.2vw
-    font-weight 700
     line-height 140%
     list-style disc
-    hyphens none
     list-style-position inside
   strong
     font-weight 700
 
 /* Paquetes */
 #packs-content
-  padding 2vh 0 4vh 0
+  padding paddignNormalH 0 paddignNormalH 0
   width 90%
   max-width 1920px
   margin 0 auto
@@ -184,51 +206,41 @@ main
   justify-content space-around
   gap 2vw
   .pack
-    padding 2vw
-    line-height 120%
+    display flex
+    flex-flow column wrap
+    gap gapNormal
+    padding paddignNormalW
     width 48%
-    border-radius 0.2vw
-    border solid 0.1vw minigreenOpaque
+    border-radius radiusNormal
+    border bordeNormal
   h3,h4
     text-align center
-    font-size 1.4vw
+    font-size clamp(1.6em, 2vw, 2.1vw)
     font-weight 700
-    text-transform uppercase
-    letter-spacing 2pt
-    margin-bottom 2vh
-    line-height 140%
+    letter-spacing 1pt
   h4
-    font-size 1.2vw
-    font-weight 400
+    font-size clamp(1.4em, 1.6vw, 1.7vw)
+    font-weight 600
   p
-    font-size 1vw
     line-height 140%
-    hyphens none
-    padding 0.6vw 0 0.6vw 0
-  ul
-    padding 0.6vw 0 0.6vw 0
   li
-    font-size 1vw
     line-height 160%
-    hyphens none
     list-style-type disc
     list-style-position inside
 
 .boton-pack
-  font-size 1vw
-  border-radius 0.2vw
+  border-radius radiusNormal
   text-align center
-  line-height 140%
   display block
-  margin 1vw 0 1vw 0
-  padding 0.4vw
-  color miniBlack
+  margin clamp(1rem, 1vw, 1.1vw) 0 clamp(1rem, 1vw, 1.1vw) 0
+  padding paddignNormalH
+  color minigreenDeep
   background miniYellow
 
 /* Component Footer */
 /* Aside y Footer */
 .content-aside
-  padding 4vh 0 4vh 0
+  padding clamp(4rem, 4vh, 4.1vh) 0 clamp(4rem, 4vh, 4.1vh) 0
   background miniYellow
 
 .wrapper-content-aside
@@ -240,17 +252,16 @@ main
   .wrapper-ul
     width 30%
   h4
-    font-size 1.4vw
-    padding-bottom 0.8vw
-    margin-bottom 1vw
+    font-size clamp(1.4em, 1.6vw, 1.7vw)
+    padding-bottom paddignNormalH
+    margin-bottom marginNormalH
     font-weight 700
-    border-bottom solid 0.1vw minigreenOpaque
+    border-bottom bordeNormal
   ul
     display flex
     flex-direction column
-    gap 1vw
+    gap gapNormal
   a
-    font-size 1vw
     font-weight 400
     color minigreenDeep
     padding 0.4vw
@@ -276,55 +287,23 @@ main
     background miniBlue
 
 footer
-  padding 4vh 0 4vh 0
+  padding clamp(4rem, 4vh, 4.1vh) 0 clamp(4rem, 4vh, 4.1vh) 0
   display flex
   justify-content center
   small
     text-align center
-    font-size 1vw
   a
     display inline
 
 /* Responsive Design */
 @media screen and (max-width:1024px)
-  /* Menu de todas las páginas */
-  .main-navigation
-    border-bottom solid 1px minigreenOpaque
-    padding 1rem 0 1rem 0
-  
-  .wrapper-menu
-    menu
-      gap 1rem
-      li
-        gap 1rem
-        outline solid 1px minigreenOpaque
-        padding 0.5rem
-        border-radius 3px
-      svg
-        width 48px
-      a
-        font-size 1em
-
-  .logotipo
-    img
-      height 48px
-
-  /* Header Index */
+  /* Componente Header */
   .wrapper-header
-    padding 120px 0 48px 0
     header
       flex-direction column
-    img
-      width 80px
-      padding 1rem
     div
-      padding 1rem
       border 0
       text-align center
-    h2
-      font-size 2em
-    h1
-      font-size 1em
   
   .content-aside
     padding 3rem 0 3rem
@@ -342,20 +321,6 @@ footer
   footer
     padding 2rem 0 2rem 0
     small
-      font-size 1em
-  
-  /* Página Index */
-  /* Contenedor de articles */
-  .wrapper-articles
-    h2,h3
-      font-size 1.8em
-      padding 0
-    p
-      font-size 1em
-    ul
-      padding 1rem 0 1rem 0
-      gap 1rem
-    li
       font-size 1em
 
   /* Paquetes */
@@ -381,24 +346,16 @@ footer
     button
       height 1.6rem !important
 
-   
 @media screen and (max-width:768px)
+  /* Component Nav */
   .wrapper-menu
-    svg
-      width 48px
-      height 48px
     menu
       display none
-      li
-        outline 0
-        width 100%
-        text-align center
-        border-bottom solid 1px minigreenOpaque
-      svg
-        display none
       a
-        font-size 1.4em
-        padding 1rem 0 1rem 0
+        font-weight 700
+    .open-menu,.closed-menu
+      span
+        font-size 48px
     .open-menu
       display block
 
@@ -411,12 +368,12 @@ footer
       background miniYellow
       display flex
       width 100%
-      background eWhite
       top 80px
       left 0
       flex-direction column
       position absolute
-      padding 1rem 0 1rem 0
+      padding 2rem 0 2rem 0
+      gap 2rem
 
   .wrapper-content-aside
     flex-direction column

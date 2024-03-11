@@ -1,5 +1,4 @@
 ---
-import { Icon } from "astro-icon/components";
 const { prevURL, nextURL } = Astro.props;
 ---
 
@@ -7,14 +6,14 @@ const { prevURL, nextURL } = Astro.props;
   {
     prevURL && (
       <a href={prevURL} title="Atrás" class="anin-rapido">
-        <Icon name="mdi:arrow-left-box" /> Atrás
+        <span class="material-symbols-rounded">arrow_back</span> Atrás
       </a>
     )
   }
   {
     nextURL && (
       <a href={nextURL} title="Siguiente" class="anin-rapido">
-        Siguiente <Icon name="mdi:arrow-right-bold-box" />
+        Siguiente <span class="material-symbols-rounded">arrow_forward</span>
       </a>
     )
   }
