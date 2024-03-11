@@ -1,1 +1,0 @@
-window.dataLayer=window.dataLayer||[];function e(){dataLayer.push(arguments)}e("js",new Date);e("config","G-1TEDTVY278");const a=document.querySelectorAll(".nav-li");a.forEach(t=>{t.getAttribute("href")===window.location.pathname&&t.setAttribute("class","li-current")});document.querySelector("#copyright").textContent=new Date().getFullYear().toString();

@@ -1,3 +1,6 @@
 # robotstxt.org/
 
 User-agent: *
+Allow: /
+
+Sitemap: https://www.minilink.edgarcornejo.com/sitemap.xml
