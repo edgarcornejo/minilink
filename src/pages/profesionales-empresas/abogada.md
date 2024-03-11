@@ -12,10 +12,6 @@ language: es-PE
 tags: ["asesora legal", "contratos", "garantías", "tributario", "societario"]
 ---
 
-# Abogada
-
-## Angela
-
 <div class="contacto">
   <p><b>Ubicación:</b> <a href='https://goo.gl/maps/xhE61KLwwZv' title='Lima' target='_blank'>Lima</a></p>
   <p><b>E-mail:</b> <a href="mailto:amguardiatrabajo@gmail.com" title="amguardiatrabajo@gmail.com" target='_blank'>amguardiatrabajo@gmail.com</a></p>
