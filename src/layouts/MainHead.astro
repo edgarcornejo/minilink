@@ -41,42 +41,4 @@ const { title, description, keywords, image, imgAlt, type, url } = Astro.props;
     href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
     rel="stylesheet"
   />
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    type="text/partytown"
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-1TEDTVY278"></script>
-  <script type="text/partytown">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-1TEDTVY278");
-  </script>
-  <script
-    async
-    src="https://fundingchoicesmessages.google.com/i/pub-5300846547834937?ers=1"
-    nonce="EGjgAhkgmmehhskahINwAQ"></script>
-  <script nonce="EGjgAhkgmmehhskahINwAQ">
-    (function () {
-      function signalGooglefcPresent() {
-        if (!window.frames["googlefcPresent"]) {
-          if (document.body) {
-            const iframe = document.createElement("iframe");
-            iframe.style =
-              "width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;";
-            iframe.style.display = "none";
-            iframe.name = "googlefcPresent";
-            document.body.appendChild(iframe);
-          } else {
-            setTimeout(signalGooglefcPresent, 0);
-          }
-        }
-      }
-      signalGooglefcPresent();
-    })();
-  </script>
 </head>
