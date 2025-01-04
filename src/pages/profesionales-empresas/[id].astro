@@ -1,0 +1,25 @@
+---
+import AdsArea from "../../components/AdsArea.astro";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, render } from "astro:content";
+
+export async function getStaticPaths() {
+	const perfiles = await getCollection("perfiles");
+	return perfiles.map((post) => ({
+		params: { id: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const { title, name, description, image, tags } = data;
+
+const { Content } = await render(post);
+---
+
+<Layout h1={title} h2={name} title={name} description={description} keywords={tags} image={image} imagealt={title}>
+  <Content />
+	<img src={image} alt={title} class="w-full block m-auto my-4 h-auto md:lg:w-[48%] md:lg:h-auto" />
+	<AdsArea/>
+</Layout>

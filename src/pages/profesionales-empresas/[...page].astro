@@ -1,4 +1,6 @@
 ---
+import { getCollection } from "astro:content";
+
 import Layout from "../../layouts/Layout.astro";
 import PerfilCard from "../../components/PerfilCard.astro";
 import Pagination from "../../components/Pagination.astro";
@@ -11,23 +13,23 @@ interface Props {
 }
 
 export async function getStaticPaths({ paginate }) {
-  const allPosts = await Astro.glob("./*.md");
-  const formattedPosts = formatBlogPosts(allPosts);
+  const perfiles = await getCollection("perfiles");
+	const formattedPosts = formatBlogPosts(perfiles);
 
-  return paginate(formattedPosts, {
-    pageSize: 6,
-  });
+	return paginate(formattedPosts, {
+		pageSize: 6,
+	});
 }
 
 const { page } = Astro.props;
 ---
 
 <Layout
-  title="Profesionales y Empresas - Minilink Soluciones profesionales en internet poner mi negocio en internet"
-  description="Ofrecemos los servicios de publicidad para tu empresa asi como servicios de diseño grafico, desarrolllo web y marketing online"
+  title="Profesionales y Empresas - Minilink Soluciones profesionales en internet poner mi negocio en internet."
+  description="Ofrecemos los servicios de publicidad para tu empresa asi como servicios de diseño gráfico, desarrollo web y marketing online"
   h2="Profesionales y Empresas"
 >
-  <div id="busqueda">
+  <section>
     <header>
       <h2>¿Qué estas buscando?</h2>
     </header>
@@ -42,29 +44,16 @@ const { page } = Astro.props;
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(gcse, s);
       })();
-    </script>
+    </script> 
     <gcse:search></gcse:search>
+  </section>
+
+  <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+
+  <div class="flex flex-wrap justify-between flex-col gap-4 my-4 md:lg:flex-row md:lg:[&>article]:w-[30%]">
+    {page.data.map((post: any) => <PerfilCard post={post} />)}
   </div>
 
   <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
-  <div class="card-container">
-    {
-      page.data.map((post: any) => (
-        <PerfilCard frontmatter={post.frontmatter} url={post.url} />
-      ))
-    }
-  </div>
-  <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
+
 </Layout>
-
-<style>
-  .card-container {
-    width: 90%;
-    max-width: 1920px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1vw 0 1vw 0;
-    gap: 1vw;
-  }
-</style>

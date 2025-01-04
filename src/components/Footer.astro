@@ -2,9 +2,9 @@
 
 ---
 
-<aside class="content-aside">
-  <section class="wrapper-content-aside">
-    <div class="wrapper-ul">
+<aside class="w-full py-8 bg-gradient-to-b from-yellow-500 to-yellow-400">
+  <section class="flex flex-col w-[90%] m-auto [&>div>h4]:text-center [&>div>h4]:font-bold [&>div>h4]:my-6 [&>div>h4]:uppercase [&>div>ul]:flex [&>div>ul]:flex-wrap [&>div>ul]:justify-center [&>div>ul]:list-none [&>div>ul]:gap-4 [&>div>ul>li]:pb-6 [&>div>ul>li>a]:p-4 [&>div>ul>li>a]:no-underline [&>div>ul>li>a]:bg-blue-600 [&>div>ul>li>a]:text-white [&>div>ul>li>a]:rounded lg:flex-row lg:justify-around">
+    <div>
       <h4>Información</h4>
       <ul>
         <li><a href="/nosotros" title="Nosotros">Nosotros</a></li>
@@ -17,20 +17,9 @@
       </ul>
     </div>
 
-    <div class="wrapper-ul">
-      <h4>Redes</h4>
-      <ul>
-        <li>
-          <a href="https://www.youtube.com/@MinilinkSoluciones" title="YouTube"
-            >YouTube</a
-          >
-        </li>
-      </ul>
-    </div>
-
-    <div class="wrapper-ul">
+    <div>
       <h4>Recomendado</h4>
-      <ul>
+      <ul class="list-none">
         <li>
           <a href="https://www.edgarcornejo.com/" title="Edgar Cornejo"
             >Edgar Cornejo</a
@@ -54,17 +43,9 @@
   </section>
 </aside>
 
-<footer>
-  <small
-    >Copyright &copy; <span id="copyright"></span>
-    <a href="https://www.edgarcornejo.com" title="Edgar Cornejo"
-      >Edgar Cornejo</a
-    > | All Rights Reserved.</small
-  >
+<footer class="w-[90%] m-auto py-4 text-center prose">
+  <small>
+    Un proyecto de 
+    <a href="https://www.edgarcornejo.com" title="Edgar Cornejo">Edgar Cornejo</a>
+    </small>
 </footer>
-
-<script>
-  document.querySelector("#copyright").textContent = new Date()
-    .getFullYear()
-    .toString();
-</script>

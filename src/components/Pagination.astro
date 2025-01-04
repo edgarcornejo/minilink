@@ -2,17 +2,17 @@
 const { prevURL, nextURL } = Astro.props;
 ---
 
-<nav class="pagination">
+<nav class="flex justify-center gap-4 w-full py-4 *:p-4 *:bg-violet-700 *:rounded *:text-white *:no-underline">
   {
     prevURL && (
-      <a href={prevURL} title="Atrás" class="anin-rapido">
+      <a href={prevURL} title="Atrás">
         Atrás
       </a>
     )
   }
   {
     nextURL && (
-      <a href={nextURL} title="Siguiente" class="anin-rapido">
+      <a href={nextURL} title="Siguiente">
         Siguiente
       </a>
     )

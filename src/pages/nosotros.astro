@@ -7,7 +7,7 @@ import Layout from "../layouts/Layout.astro";
   description="Es un directorio especializado y personalizado en profesionales y empresas. En el cual puedes presentarte a tus futuros clientes."
   h2="Nosotros"
 >
-  <section class="wrapper-articles">
+  <section class="[&>article]:my-8 [&>article>header>h2]:text-center [&>article>header>h3]:text-center [&>article>header>h3]:text-gray-600 [&>article>div]:max-w-[900px] [&>article>div]:m-auto">
     <article>
       <header>
         <h2>Minilink Soluciones</h2>
@@ -20,7 +20,7 @@ import Layout from "../layouts/Layout.astro";
         </p>
         <p>
           Minilink Soluciones es una idea muy joven que está dando sus primeros
-          pasos, damos nuestro esfuerzo para que esto crezca y poder ayudar a
+          pasos, damos nuestro esfuerzo para que esto crezca y poder ayudar a 
           muchos más.
         </p>
       </div>
@@ -53,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
           para publicar es la siguiente:
         </p>
 
-        <ul>
+        <ul class="marker:text-gray-500">
           <li>Nombre de empresa o nombre propio</li>
           <li>Teléfono, correo, dirección y redes sociales</li>
           <li>Descripción de lo que hace usted o su empresa</li>

@@ -4,45 +4,67 @@ import { Image } from "astro:assets";
 import logo from "../assets/minilink.svg";
 ---
 
-<nav class="main-navigation">
-  <input id="menu" type="checkbox" class="input-menu" />
-
-  <div class="wrapper-menu">
-    <div class="logotipo">
-      <a href="/" title="Volver al inicio del sitio">
-        <Image src={logo} alt="Logotipo Minilink Soluciones" />
-      </a>
-    </div>
-
-    <label for="menu" class="open-menu"
-      ><img src="img/open.svg" alt="open"></label
-    >
-    <label for="menu" class="closed-menu"
-      ><img src="img/closed.svg" alt="closed"></label
-    >
-    <menu>
-      <li>
-        <a
-          href="/profesionales-empresas/"
-          title="Profesionales y Empresas"
-          class="nav-li"
-          >Profesionales y Empresas</a
-        >
-      </li>
-      <li>
-        <a href="/nosotros" title="Nosotros" class="nav-li"
-          >Nosotros</a
-        >
-      </li>
-      <li>
-        <a href="/afiliarte" title="Afiliarte" class="nav-li"
-          >Afiliarte</a
-        >
-      </li>
-    </menu>
+<nav class="flex justify-between width-full bg-yellow-400">
+  <div class="p-2">
+    <a href="/" title="Inicio">
+      <Image src={logo} alt="Logotipo Minilink Soluciones" class="w-6"/>
+    </a>
   </div>
+
+  <button popovertarget="abrir-menu">
+    <img src="/img/open.svg" alt="" class="p-2">
+  </button>
+
+  <menu id="abrir-menu" popover class="w-screen mr-auto bg-yellow-400 rounded overflow-hidden p-2 [&>li]:text-center [&>li]:p-4 [&>li]:font-bold [&>li]:uppercase" >
+    <li>
+      <a
+        href="/profesionales-empresas/"
+        title="Profesionales y Empresas"
+        class="nav-li"
+        >Profesionales y Empresas</a
+      >
+    </li>
+    <li>
+      <a href="/nosotros" title="Nosotros" class="nav-li"
+        >Nosotros</a
+      >
+    </li>
+    <li>
+      <a href="/afiliarte" title="Afiliarte" class="nav-li"
+        >Afiliarte</a
+      >
+    </li>
+    <button popovertargetaction=hide popovertarget="abrir-menu" class="flex mr-auto justify-center w-full bg-yellow-500 p-4">
+      <img src="/img/closed.svg" alt="">
+    </button>
+  </menu>
 </nav>
 
-<script>
-  import "../js/nav.js";
-</script>
+<style>
+  [popover] {
+    &:popover-open {
+      opacity: 1;
+    }
+    &::backdrop {
+      background: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  [popovertarget="abrir-menu"] {
+    anchor-name: --abrir-menu;
+  }
+
+  #abrir-menu {
+    top: anchor(--abrir-menu bottom);
+    transition: translate .6s ease;
+    translate: 0 0;
+    @starting-style {
+      width: 100vw;
+      translate: 0 -500px;
+      opacity: 0;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+</style>

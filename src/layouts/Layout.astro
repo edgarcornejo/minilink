@@ -1,6 +1,5 @@
 ---
 /* importando estilos */
-import "../styles/reset.css";
 import "../styles/global.css";
 
 /* importando componentes */
@@ -8,6 +7,7 @@ import MainHead from "./MainHead.astro";
 import Nav from "../components/Nav.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import CookiesView from "../components/CookiesView.astro";
 
 const {
   /* Para componente MainHead */
@@ -15,7 +15,7 @@ const {
   description = "Pública tu profesión o empresa en Internet con Minilink Soluciones, fácil y gratuitamente.",
   keywords = "directorio empresarial, profesionales, Minilink Soluciones, diseñadores, topógrafo, publica tu profesión",
   image = "/minilink.svg",
-  imgAlt = "M mayuscula con la palabra minilink debajo de ella.",
+  imgAlt = "M mayúscula con la palabra Minilink debajo de ella.",
   type = "Website",
   url = "minilink.edgarcornejo.com",
   category,
@@ -29,15 +29,17 @@ const {
 <!doctype html>
 <html lang="es">
   <MainHead {title} {description} {keywords} {image} {imgAlt} {type} {url} />
-  <body>
+  <body class="font-sans text-base bg-[url('/img/struckaxiom.png')]">
     <Nav />
 
-    <Header {image} {imgAlt} {h1} {h2} {category} {offers} />
+    <Header {image} {h1} {h2} {category} {offers} />
 
-    <main>
+    <main class="m-auto py-2 max-w-[90%] prose">
       <slot />
     </main>
 
     <Footer />
+
+    <CookiesView />
   </body>
 </html>

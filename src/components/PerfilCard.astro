@@ -1,28 +1,29 @@
 ---
-const { frontmatter, url } = Astro.props;
-const { title, image, description, category, name, tags } = frontmatter;
+import { slugify } from "../js/utils.js";
+
+const { post } = Astro.props;
 ---
 
-<article class="card-profile">
-  <a href={url} title={title}>
-    <span class="card-category">{category}</span>
+<article class="p-4 bg-gray-200 rounded">
+  <a href={`/profesionales-empresas/${slugify(post.slug)}/`} title={post.data.title} class="no-underline">
+    <small class="absolute uppercase font-bold text-gray-500 m-0">{post.data.category}</small>
 
-    <header>
-      <h2>{title}</h2>
-      <h3>{name}</h3>
+    <header class="text-center border-solid border-4 border-b-gray-300">
+      <h2 class="uppercase text-gray-600">{post.data.title}</h2>
+      <h3>{post.data.name}</h3>
     </header>
 
-    <div class="card-descripcion">
-      <p>{description.slice(0, 100)}...</p>
+    <div>
+      <p>{post.data.description.slice(0, 100)}...</p>
     </div>
 
     <figure>
-      <img src={image.url} alt={image.alt} />
-      <figcaption>{name}</figcaption>
+      <img src={post.data.image} alt={post.data.title} loading="lazy" class="rounded" />
+      <figcaption class="text-center">{post.data.name}</figcaption>
     </figure>
 
-    <div class="card-tags">
-      {tags.map((tag: any) => <span>{tag}</span>)}
+    <div>
+      {post.data.tags.map((tag: any) => <span>{tag}, </span>)}
     </div>
   </a>
 </article>
