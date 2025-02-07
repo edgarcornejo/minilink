@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 @layer base {
   :root {
@@ -13,14 +11,24 @@
     --minigreenDeep: #443252;
     --miniWhite: #F2F2F2;
     --miniBlack: #1a1f29;
-    /* Border y Outline */
-    --borde: clamp(3px, 0.3vw, 0.4vw);
-    --radius: clamp(3px, 0.3vw, 0.4vw);
+    /* Border, Outline y Shadow */
+    --borde: clamp(3px, .3vw, .3vw);
+    --radius: clamp(3px, .3vw, .3vw);
+    --shadow: 5px 5px 10px var(--minigreenDeep);
+    --shadow-hover: 5px 5px 15px var(--minigreenDeep);
     /* Padding */
-    --espacio1: clamp(16px, 1vh, 1.1vh);
-    --espacio2: clamp(32px, 2vh, 2.1vh);
-    --espacio3: clamp(48px, 3vh, 3.2px);
-    --espacio4: clamp(64px, 4vh, 4.1vh);
+    --espacio: clamp(8px, .5vh, .5vh);
+    --espacio1: clamp(16px, 1vh, 1vh);
+    --espacio2: clamp(32px, 2vh, 2vh);
+    --espacio3: clamp(48px, 3vh, 3px);
+    --espacio4: clamp(64px, 4vh, 4vh);
+    /* Tamaño de texto */
+    --h1: clamp(32px, 2vw, 2vw);
+    --h2: clamp(28px, 1.8vw, 1.8vw);
+    --h3: clamp(24px, 1.6vw, 1.6vw);
+    --h4: clamp(21px, 1.4vw, 1.4vw);
+    --h5: clamp(18px, 1.2vw, 1.2vw);	
+    --h6: clamp(16px, 1vw, 1vw);
   }
 
   @font-face {
@@ -28,7 +36,7 @@
     font-weight: 400;
     font-style: normal;
     font-display: swap;
-    src: url(/fonts/AtkinsonHyperlegible-Regular.ttf) format("truetype");
+    src: url("/fonts/AtkinsonHyperlegible-Regular.ttf") format("truetype");
   }
   
   @font-face {
@@ -36,7 +44,7 @@
     font-weight: 700;
     font-style: normal;
     font-display: swap;
-    src: url(/fonts/AtkinsonHyperlegible-Bold.ttf) format("truetype");
+    src: url("/fonts/AtkinsonHyperlegible-Bold.ttf") format("truetype");
   }
   
   @font-face {
@@ -44,7 +52,7 @@
     font-weight: 400;
     font-style: italic;
     font-display: swap;
-    src: url(/fonts/AtkinsonHyperlegible-Italic.ttf) format("truetype");
+    src: url("/fonts/AtkinsonHyperlegible-Italic.ttf") format("truetype");
   }
   
   @font-face {
@@ -52,12 +60,114 @@
     font-weight: 700;
     font-style: italic;
     font-display: swap;
-    src: url(/fonts/AtkinsonHyperlegible-BoldItalic.ttf) format("truetype");
+    src: url("/fonts/AtkinsonHyperlegible-BoldItalic.ttf") format("truetype");
   }
 }
 
 body {
-  background: var(--miniWhite);
+  background-color: var(--miniWhite);
+  color: var(--miniBlack);
+  font-family: "Atkinson Hyperlegible", sans-serif;
   font-size: clamp(16px, 1vw, 1.1rem);
 }
 
+h1,h2,h3,h4,h5,h6 {
+  line-height: 1.2;
+  margin-bottom: var(--espacio1);
+  padding: var(--espacio) 0 var(--espacio) 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+p {
+  line-height: 1.4;
+  opacity: 0.8;
+  margin-bottom: var(--espacio);
+}
+
+a {
+  transition: all .4s ease-in-out;
+}
+
+button {
+  cursor: pointer;
+}
+
+#paquetes {
+  gap: var(--espacio1);
+  margin: var(--espacio2) 0 var(--espacio2) 0;
+  div {
+    outline: solid var(--borde) var(--minigreenDeep);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    padding: var(--espacio1);
+    transition: all .4s ease-in-out;
+    &:hover {
+      box-shadow: var(--shadow-hover);
+    }
+  }
+  header {
+    border-bottom: solid var(--borde) var(--minigreenDeep);
+    margin-bottom: var(--espacio1);
+  }
+  h4 {
+    opacity: 0.6;
+    margin: var(--espacio1) auto;
+    width: fit-content;
+    border-bottom: solid var(--borde) var(--minigreenDeep);
+  }
+  a {
+    display: block;
+    color: var(--miniWhite);
+    letter-spacing: 1pt;
+    font-weight: 700;
+    border-radius: var(--radius);
+    text-align: center;
+    margin: var(--espacio1) auto;
+    width: fit-content;
+    padding: var(--espacio1);
+    background-color: var(--miniBlue);
+    &:hover {
+      background-color: var(--miniViolet);
+    }
+  }
+}
+
+#perfiles {
+  border-radius: var(--radius);
+  padding: var(--espacio1);
+  transition: all .4s ease-in-out;
+  outline: solid var(--borde) var(--minigreenDeep);
+  box-shadow: var(--shadow);
+  position: relative;
+  &:hover {
+    box-shadow: var(--shadow-hover);
+  }
+  small {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-style: italic;
+    background-color: var(--miniYellow);
+    padding: var(--espacio);
+    border-radius: var(--radius);
+  }
+  header {
+    border-bottom: solid var(--borde) var(--minigreenDeep);
+    margin: var(--espacio1) 0 var(--espacio1) 0;
+  }
+  h3 {
+    opacity: 0.6;
+  }
+  figure {
+    position: relative;
+  }
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--miniYellow);
+    padding: var(--espacio);
+  }
+}

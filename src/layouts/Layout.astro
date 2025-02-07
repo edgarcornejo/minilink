@@ -29,12 +29,12 @@ const {
 <!doctype html>
 <html lang="es">
   <MainHead {title} {description} {keywords} {image} {imgAlt} {type} {url} />
-  <body class="font-sans text-base bg-[url('/img/struckaxiom.png')]">
+  <body class="bg-[url('/img/struckaxiom.png')]">
     <Nav />
 
     <Header {image} {h1} {h2} {category} {offers} />
 
-    <main class="m-auto py-2 max-w-[90%] prose">
+    <main class="m-auto py-(--espacio2) max-w-[90%]">
       <slot />
     </main>
 

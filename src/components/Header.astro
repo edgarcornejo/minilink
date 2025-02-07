@@ -2,10 +2,10 @@
 const { image, h1, h2, category, offers } = Astro.props;
 ---
 
-<div class="w-full bg-gradient-to-b from-yellow-500 to-yellow-300">
-  <header class="relative z-10 w-[90%] m-auto py-10 text-center prose">
-    <h2 class="text-white uppercase">{category} {h2}</h2>
-    <h1>{offers} {h1}</h1>
-    <img src={image} alt={h1} class="absolute top-0 right-0 z-0 opacity-10 h-[80%] w-auto mix-blend-multiply" />
+<div class="w-full bg-gradient-to-b from-yellow-500 to-(--miniYellow)">
+  <header class="relative z-1 w-[90%] m-auto py-(--espacio3)">
+    <h2 class="text-(length:--h1) text-(--miniWhite) uppercase">{category} {h2}</h2>
+    <h1 class="font-[400]! italic text-(length:--h4) py-(--espacio1)">{offers} {h1}</h1>
+    <img src={image} alt={h1} class="absolute bottom-0 right-0 z-0 opacity-10 h-[80%] w-auto mix-blend-multiply" />
   </header>
 </div>

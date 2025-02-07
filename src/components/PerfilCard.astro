@@ -4,13 +4,13 @@ import { slugify } from "../js/utils.js";
 const { post } = Astro.props;
 ---
 
-<article class="p-4 bg-gray-200 rounded">
-  <a href={`/profesionales-empresas/${slugify(post.slug)}/`} title={post.data.title} class="no-underline">
-    <small class="absolute uppercase font-bold text-gray-500 m-0">{post.data.category}</small>
+<article id="perfiles">
+  <a href={`/profesionales-empresas/${slugify(post.slug)}/`} title={post.data.title} >
+    <small>{post.data.category}</small>
 
-    <header class="text-center border-solid border-4 border-b-gray-300">
-      <h2 class="uppercase text-gray-600">{post.data.title}</h2>
-      <h3>{post.data.name}</h3>
+    <header>
+      <h2 class="text-(length:--h2)">{post.data.title}</h2>
+      <h3 class="text-(length:--h3)">{post.data.name}</h3>
     </header>
 
     <div>
@@ -21,9 +21,5 @@ const { post } = Astro.props;
       <img src={post.data.image} alt={post.data.title} loading="lazy" class="rounded" />
       <figcaption class="text-center">{post.data.name}</figcaption>
     </figure>
-
-    <div>
-      {post.data.tags.map((tag: any) => <span>{tag}, </span>)}
-    </div>
   </a>
 </article>

@@ -4,18 +4,18 @@ import { Image } from "astro:assets";
 import logo from "../assets/minilink.svg";
 ---
 
-<nav class="flex justify-between width-full bg-yellow-400">
-  <div class="p-2">
+<nav class="flex justify-between p-(--espacio) width-full bg-(--miniYellow)">
+  <div class="p-(--espacio)">
     <a href="/" title="Inicio">
       <Image src={logo} alt="Logotipo Minilink Soluciones" class="w-6"/>
     </a>
   </div>
 
   <button popovertarget="abrir-menu">
-    <img src="/img/open.svg" alt="" class="p-2">
+    <img src="/img/open.svg" alt="" class="p-(--espacio)">
   </button>
 
-  <menu id="abrir-menu" popover class="w-screen mr-auto bg-yellow-400 rounded overflow-hidden p-2 [&>li]:text-center [&>li]:p-4 [&>li]:font-bold [&>li]:uppercase" >
+  <menu id="abrir-menu" popover class="w-screen mr-auto bg-(--miniYellow) rounded overflow-hidden p-(--espacio) [&>li]:text-center [&>li]:p-(--espacio) [&>li]:font-bold [&>li]:uppercase">
     <li>
       <a
         href="/profesionales-empresas/"
@@ -34,7 +34,7 @@ import logo from "../assets/minilink.svg";
         >Afiliarte</a
       >
     </li>
-    <button popovertargetaction=hide popovertarget="abrir-menu" class="flex mr-auto justify-center w-full bg-yellow-500 p-4">
+    <button popovertargetaction=hide popovertarget="abrir-menu" class="flex mr-auto justify-center w-full bg-(--miniGreen) p-(--espacio)">
       <img src="/img/closed.svg" alt="">
     </button>
   </menu>

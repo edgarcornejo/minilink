@@ -2,7 +2,7 @@
 const { prevURL, nextURL } = Astro.props;
 ---
 
-<nav class="flex justify-center gap-4 w-full py-4 *:p-4 *:bg-violet-700 *:rounded *:text-white *:no-underline">
+<nav class="flex justify-center gap-(--espacio1) w-full my-(--espacio1) *:p-(--espacio1) *:bg-(--miniBlue) *:rounded *:text-white">
   {
     prevURL && (
       <a href={prevURL} title="Atrás">

@@ -29,9 +29,9 @@ const { page } = Astro.props;
   description="Ofrecemos los servicios de publicidad para tu empresa asi como servicios de diseño gráfico, desarrollo web y marketing online"
   h2="Profesionales y Empresas"
 >
-  <section>
+  <section class="py-(--espacio2)">
     <header>
-      <h2>¿Qué estas buscando?</h2>
+      <h2 class="text-(length:--h2)">¿Qué estas buscando?</h2>
     </header>
 
     <script>
@@ -50,7 +50,7 @@ const { page } = Astro.props;
 
   <Pagination prevURL={page.url.prev} nextURL={page.url.next} />
 
-  <div class="flex flex-wrap justify-between flex-col gap-4 my-4 md:lg:flex-row md:lg:[&>article]:w-[30%]">
+  <div class="flex flex-wrap justify-between flex-col gap-(--espacio2) my-(--espacio4) md:lg:flex-row md:lg:[&>article]:w-[30%]">
     {page.data.map((post: any) => <PerfilCard post={post} />)}
   </div>
 
